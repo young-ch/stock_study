@@ -209,7 +209,7 @@ class collector_api():
 
     def get_code_list(self):
         self.dc.cc.get_item()
-        
+
         self.dc.cc.get_item_kospi()
         self.dc.cc.get_item_kosdaq()
         self.dc.cc.get_item_konex()

@@ -148,49 +148,30 @@ class simulator_func_mysql():
             # 실전/모의 봇 돌릴 때 매수하는 순간 종목의 최신 종가 보다 -2% 이하로 떨어진 경우 사지 않도록 하는 설정(변경 가능)
             self.invest_min_limit_rate = 0.98
 
-
         elif self.simul_num == 3:
-
             # 시뮬레이팅 시작 일자
-
-            self.simul_start_date = "20190101"
+            self.simul_start_date = "20200601"
 
             ######### 알고리즘 선택 #############
-
             # 매수 리스트 설정 알고리즘 번호
-
-            self.db_to_realtime_daily_buy_list_num = 3
-
+            self.db_to_realtime_daily_buy_list_num = 1
             # 매도 리스트 설정 알고리즘 번호
-
             self.sell_list_num = 2
-
             ###################################
-
             # 초기 투자자금
-
             self.start_invest_price = 10000000
-
             # 매수 금액
-
-            self.invest_unit = 3000000
-
+            self.invest_unit = 1000000
             # 자산 중 최소로 남겨 둘 금액
-
             self.limit_money = 1000000
-
-            # 익절 수익률 기준치
-
-            self.sell_point = 10
-
+            # # 익절 수익률 기준치
+            self.sell_point = 6
             # 손절 수익률 기준치
-
             self.losscut_point = -2
             # 실전/모의 봇 돌릴 때 매수하는 순간 종목의 최신 종가 보다 1% 이상 오른 경우 사지 않도록 하는 설정(변경 가능)
             self.invest_limit_rate = 1.01
             # 실전/모의 봇 돌릴 때 매수하는 순간 종목의 최신 종가 보다 -2% 이하로 떨어진 경우 사지 않도록 하는 설정(변경 가능)
             self.invest_min_limit_rate = 0.98
-
         #########################################################################################################################
         self.db_name_setting()
 
@@ -474,7 +455,7 @@ class simulator_func_mysql():
         # 5 / 20 골든크로스 buy
         if self.db_to_realtime_daily_buy_list_num == 1:
             # orderby는 거래량 많은 순서
-
+            # select null from stock_konex b where a.code=b.code   konex 종목은 제외
             sql = "select * from `" + date_rows_yesterday + "` a where yes_clo20 > yes_clo5 and clo5 > clo20 " \
                                                             "and NOT exists (select null from stock_konex b where a.code=b.code) " \
                                                             "and close < '%s' group by code"
@@ -491,11 +472,15 @@ class simulator_func_mysql():
 
 
         elif self.db_to_realtime_daily_buy_list_num == 3:
-            sql = "select * from `" + date_rows_yesterday + "` a where d1_diff_rate > 1 " \
+            sql = "select * from `" + date_rows_yesterday + "` a where yes_clo20 > yes_clo5 and clo5 > clo20 " \
+                                                            "and volume >= 300000 " \
                                                             "and NOT exists (select null from stock_konex b where a.code=b.code) " \
                                                             "and close < '%s' group by code"
-            # 아래 명령을 통해 테이블로 부터 데이터를 가져오면 리스트 형태로 realtime_daily_buy_list 에 담긴다.
             realtime_daily_buy_list = self.engine_daily_buy_list.execute(sql % (self.invest_unit)).fetchall()
+        # 매수 알고리즘을 추가하는 곳
+
+            # 아래 명령을 통해 테이블로 부터 데이터를 가져오면 리스트 형태로 realtime_daily_buy_list 에 담긴다.
+
 
         ######################################################################################################################################################################################
 

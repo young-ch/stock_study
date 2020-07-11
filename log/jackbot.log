@@ -1,0 +1,860 @@
+[DEBUG|logging_pack.py:36] 2020-07-11 23:06:01,410 > debug 모드!
+[INFO|logging_pack.py:37] 2020-07-11 23:06:01,411 > info 모드!
+[WARNING|logging_pack.py:38] 2020-07-11 23:06:01,412 > warning 모드!
+[ERROR|logging_pack.py:39] 2020-07-11 23:06:01,412 > error 모드!
+[CRITICAL|logging_pack.py:40] 2020-07-11 23:06:01,412 > critical 모드!
+[DEBUG|trader.py:5] 2020-07-11 23:06:01,437 > trader start !!!!!!
+[DEBUG|trader.py:9] 2020-07-11 23:06:01,455 > Trader __init__!!!
+[DEBUG|open_api.py:268] 2020-07-11 23:06:04,723 > connected
+[DEBUG|open_api.py:213] 2020-07-11 23:06:04,723 > account_info 함수에 들어왔습니다!
+[DEBUG|open_api.py:220] 2020-07-11 23:06:04,723 > get_login_info 함수에 들어왔습니다!
+[DEBUG|open_api.py:216] 2020-07-11 23:06:04,723 > 계좌번호 : 8135287911
+[DEBUG|open_api.py:131] 2020-07-11 23:06:04,726 > variable_setting 함수에 들어왔다.
+[DEBUG|open_api.py:146] 2020-07-11 23:06:04,726 > 모의투자 1!!
+[DEBUG|open_api.py:192] 2020-07-11 23:06:04,726 > db name !!! : JackBot1_imi1
+[DEBUG|open_api.py:183] 2020-07-11 23:06:04,791 > JackBot1_imi1 데이터 베이스가 존재한다! 
+[DEBUG|open_api.py:46] 2020-07-11 23:06:04,798 > self.sf.simul_num(알고리즘 번호) : 1
+[DEBUG|open_api.py:47] 2020-07-11 23:06:04,799 > self.sf.db_to_realtime_daily_buy_list_num : 1
+[DEBUG|open_api.py:48] 2020-07-11 23:06:04,799 > self.sf.sell_list_num : 1
+[DEBUG|open_api.py:54] 2020-07-11 23:06:04,816 > setting_data db 존재한다!!!
+[DEBUG|open_api.py:66] 2020-07-11 23:06:04,854 > get_invest_unit 함수에 들어왔습니다!
+[DEBUG|trader.py:111] 2020-07-11 23:06:05,155 > market_time_check!!!
+[DEBUG|trader.py:64] 2020-07-11 23:06:05,156 > auto_trade_sell_stock 함수에 들어왔습니다!
+[DEBUG|open_api.py:468] 2020-07-11 23:06:05,156 > check_balance 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:05,456 > 1
+[DEBUG|open_api.py:255] 2020-07-11 23:06:06,349 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:06,349 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1624] 2020-07-11 23:06:06,350 > _opw00018!!!
+[DEBUG|open_api.py:508] 2020-07-11 23:06:06,351 > db_to_possesed_item 함수에 들어왔습니다!
+[DEBUG|open_api.py:1048] 2020-07-11 23:06:06,498 > possess_item 테이블에는 없는데 all_item_db에 sell_date가 없는 리스트 처리!!!
+[DEBUG|open_api.py:1049] 2020-07-11 23:06:06,499 > []
+[DEBUG|trader.py:48] 2020-07-11 23:06:06,499 > get_sell_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:1085] 2020-07-11 23:06:06,500 > chegyul_check!!!
+[DEBUG|open_api.py:1090] 2020-07-11 23:06:06,500 > possess_item 테이블에는 있는데 all_item_db에 없는 종목들 처리!!!
+[DEBUG|open_api.py:1091] 2020-07-11 23:06:06,501 > []
+[DEBUG|open_api.py:1102] 2020-07-11 23:06:06,501 > in chegyul_check!!!!! all_db에서 cc가 1인놈들 확인!!!!!!!!
+[DEBUG|open_api.py:1103] 2020-07-11 23:06:06,501 > []
+[DEBUG|open_api.py:1063] 2020-07-11 23:06:06,501 > rate_check!!!
+[DEBUG|open_api.py:1067] 2020-07-11 23:06:06,502 > rate 업데이트 !!!
+[DEBUG|open_api.py:1068] 2020-07-11 23:06:06,502 > []
+[DEBUG|trader.py:58] 2020-07-11 23:06:06,504 > 매도 리스트!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[DEBUG|trader.py:59] 2020-07-11 23:06:06,504 > []
+[DEBUG|open_api.py:908] 2020-07-11 23:06:06,504 > jango_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:1460] 2020-07-11 23:06:06,504 > get_d2_deposit 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:06,805 > 2
+[DEBUG|open_api.py:255] 2020-07-11 23:06:06,828 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:06,829 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1471] 2020-07-11 23:06:06,832 > _opw00001!!!
+[DEBUG|open_api.py:1475] 2020-07-11 23:06:06,833 > 예수금!!!!
+[DEBUG|open_api.py:1476] 2020-07-11 23:06:06,833 > 000000050000000
+[DEBUG|open_api.py:916] 2020-07-11 23:06:06,836 > 돈안부족해 투자 가능!!!!!!!!
+[DEBUG|trader.py:121] 2020-07-11 23:06:06,836 > buy_time_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:930] 2020-07-11 23:06:06,836 > buy_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:935] 2020-07-11 23:06:06,839 > GoGo Buying!!!!!!
+[DEBUG|trader.py:43] 2020-07-11 23:06:06,840 > auto_trade_stock함수에 들어왔습니다!
+[DEBUG|open_api.py:988] 2020-07-11 23:06:06,841 > get_today_buy_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:990] 2020-07-11 23:06:06,841 >  self.today : 20200711 , self.date_rows_yesterday : 20200710 !
+[DEBUG|open_api.py:993] 2020-07-11 23:06:06,846 > realtime_daily_buy_list 생겼다!!!!! 
+[DEBUG|open_api.py:996] 2020-07-11 23:06:06,879 > realtime_daily_buy_list 생겼지만 아직 data가 없다!!!!! 
+[DEBUG|trader.py:111] 2020-07-11 23:06:07,181 > market_time_check!!!
+[DEBUG|trader.py:64] 2020-07-11 23:06:07,181 > auto_trade_sell_stock 함수에 들어왔습니다!
+[DEBUG|open_api.py:468] 2020-07-11 23:06:07,181 > check_balance 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:07,481 > 3
+[DEBUG|open_api.py:255] 2020-07-11 23:06:07,501 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:07,501 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1624] 2020-07-11 23:06:07,502 > _opw00018!!!
+[DEBUG|open_api.py:508] 2020-07-11 23:06:07,503 > db_to_possesed_item 함수에 들어왔습니다!
+[DEBUG|open_api.py:1048] 2020-07-11 23:06:07,588 > possess_item 테이블에는 없는데 all_item_db에 sell_date가 없는 리스트 처리!!!
+[DEBUG|open_api.py:1049] 2020-07-11 23:06:07,588 > []
+[DEBUG|trader.py:48] 2020-07-11 23:06:07,589 > get_sell_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:1085] 2020-07-11 23:06:07,589 > chegyul_check!!!
+[DEBUG|open_api.py:1090] 2020-07-11 23:06:07,590 > possess_item 테이블에는 있는데 all_item_db에 없는 종목들 처리!!!
+[DEBUG|open_api.py:1091] 2020-07-11 23:06:07,590 > []
+[DEBUG|open_api.py:1102] 2020-07-11 23:06:07,591 > in chegyul_check!!!!! all_db에서 cc가 1인놈들 확인!!!!!!!!
+[DEBUG|open_api.py:1103] 2020-07-11 23:06:07,591 > []
+[DEBUG|open_api.py:1063] 2020-07-11 23:06:07,591 > rate_check!!!
+[DEBUG|open_api.py:1067] 2020-07-11 23:06:07,591 > rate 업데이트 !!!
+[DEBUG|open_api.py:1068] 2020-07-11 23:06:07,592 > []
+[DEBUG|trader.py:58] 2020-07-11 23:06:07,592 > 매도 리스트!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[DEBUG|trader.py:59] 2020-07-11 23:06:07,593 > []
+[DEBUG|open_api.py:908] 2020-07-11 23:06:07,593 > jango_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:1460] 2020-07-11 23:06:07,593 > get_d2_deposit 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:07,893 > 4
+[DEBUG|open_api.py:255] 2020-07-11 23:06:07,917 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:07,917 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1471] 2020-07-11 23:06:07,918 > _opw00001!!!
+[DEBUG|open_api.py:1475] 2020-07-11 23:06:07,918 > 예수금!!!!
+[DEBUG|open_api.py:1476] 2020-07-11 23:06:07,919 > 000000050000000
+[DEBUG|open_api.py:916] 2020-07-11 23:06:07,920 > 돈안부족해 투자 가능!!!!!!!!
+[DEBUG|trader.py:121] 2020-07-11 23:06:07,920 > buy_time_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:930] 2020-07-11 23:06:07,920 > buy_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:935] 2020-07-11 23:06:07,924 > GoGo Buying!!!!!!
+[DEBUG|trader.py:43] 2020-07-11 23:06:07,924 > auto_trade_stock함수에 들어왔습니다!
+[DEBUG|open_api.py:988] 2020-07-11 23:06:07,924 > get_today_buy_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:990] 2020-07-11 23:06:07,924 >  self.today : 20200711 , self.date_rows_yesterday : 20200710 !
+[DEBUG|open_api.py:993] 2020-07-11 23:06:07,929 > realtime_daily_buy_list 생겼다!!!!! 
+[DEBUG|open_api.py:996] 2020-07-11 23:06:07,940 > realtime_daily_buy_list 생겼지만 아직 data가 없다!!!!! 
+[DEBUG|trader.py:111] 2020-07-11 23:06:08,240 > market_time_check!!!
+[DEBUG|trader.py:64] 2020-07-11 23:06:08,240 > auto_trade_sell_stock 함수에 들어왔습니다!
+[DEBUG|open_api.py:468] 2020-07-11 23:06:08,240 > check_balance 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:08,540 > 5
+[DEBUG|open_api.py:255] 2020-07-11 23:06:08,560 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:08,560 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1624] 2020-07-11 23:06:08,561 > _opw00018!!!
+[DEBUG|open_api.py:508] 2020-07-11 23:06:08,576 > db_to_possesed_item 함수에 들어왔습니다!
+[DEBUG|open_api.py:1048] 2020-07-11 23:06:08,676 > possess_item 테이블에는 없는데 all_item_db에 sell_date가 없는 리스트 처리!!!
+[DEBUG|open_api.py:1049] 2020-07-11 23:06:08,676 > []
+[DEBUG|trader.py:48] 2020-07-11 23:06:08,677 > get_sell_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:1085] 2020-07-11 23:06:08,677 > chegyul_check!!!
+[DEBUG|open_api.py:1090] 2020-07-11 23:06:08,678 > possess_item 테이블에는 있는데 all_item_db에 없는 종목들 처리!!!
+[DEBUG|open_api.py:1091] 2020-07-11 23:06:08,678 > []
+[DEBUG|open_api.py:1102] 2020-07-11 23:06:08,679 > in chegyul_check!!!!! all_db에서 cc가 1인놈들 확인!!!!!!!!
+[DEBUG|open_api.py:1103] 2020-07-11 23:06:08,679 > []
+[DEBUG|open_api.py:1063] 2020-07-11 23:06:08,679 > rate_check!!!
+[DEBUG|open_api.py:1067] 2020-07-11 23:06:08,680 > rate 업데이트 !!!
+[DEBUG|open_api.py:1068] 2020-07-11 23:06:08,680 > []
+[DEBUG|trader.py:58] 2020-07-11 23:06:08,681 > 매도 리스트!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[DEBUG|trader.py:59] 2020-07-11 23:06:08,681 > []
+[DEBUG|open_api.py:908] 2020-07-11 23:06:08,681 > jango_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:1460] 2020-07-11 23:06:08,681 > get_d2_deposit 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:08,981 > 6
+[DEBUG|open_api.py:255] 2020-07-11 23:06:08,999 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:08,999 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1471] 2020-07-11 23:06:09,000 > _opw00001!!!
+[DEBUG|open_api.py:1475] 2020-07-11 23:06:09,000 > 예수금!!!!
+[DEBUG|open_api.py:1476] 2020-07-11 23:06:09,000 > 000000050000000
+[DEBUG|open_api.py:916] 2020-07-11 23:06:09,001 > 돈안부족해 투자 가능!!!!!!!!
+[DEBUG|trader.py:121] 2020-07-11 23:06:09,001 > buy_time_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:930] 2020-07-11 23:06:09,001 > buy_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:935] 2020-07-11 23:06:09,002 > GoGo Buying!!!!!!
+[DEBUG|trader.py:43] 2020-07-11 23:06:09,002 > auto_trade_stock함수에 들어왔습니다!
+[DEBUG|open_api.py:988] 2020-07-11 23:06:09,002 > get_today_buy_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:990] 2020-07-11 23:06:09,002 >  self.today : 20200711 , self.date_rows_yesterday : 20200710 !
+[DEBUG|open_api.py:993] 2020-07-11 23:06:09,003 > realtime_daily_buy_list 생겼다!!!!! 
+[DEBUG|open_api.py:996] 2020-07-11 23:06:09,010 > realtime_daily_buy_list 생겼지만 아직 data가 없다!!!!! 
+[DEBUG|trader.py:111] 2020-07-11 23:06:09,310 > market_time_check!!!
+[DEBUG|trader.py:64] 2020-07-11 23:06:09,310 > auto_trade_sell_stock 함수에 들어왔습니다!
+[DEBUG|open_api.py:468] 2020-07-11 23:06:09,310 > check_balance 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:09,610 > 7
+[DEBUG|open_api.py:255] 2020-07-11 23:06:09,628 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:09,628 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1624] 2020-07-11 23:06:09,630 > _opw00018!!!
+[DEBUG|open_api.py:508] 2020-07-11 23:06:09,632 > db_to_possesed_item 함수에 들어왔습니다!
+[DEBUG|open_api.py:1048] 2020-07-11 23:06:09,729 > possess_item 테이블에는 없는데 all_item_db에 sell_date가 없는 리스트 처리!!!
+[DEBUG|open_api.py:1049] 2020-07-11 23:06:09,729 > []
+[DEBUG|trader.py:48] 2020-07-11 23:06:09,730 > get_sell_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:1085] 2020-07-11 23:06:09,730 > chegyul_check!!!
+[DEBUG|open_api.py:1090] 2020-07-11 23:06:09,730 > possess_item 테이블에는 있는데 all_item_db에 없는 종목들 처리!!!
+[DEBUG|open_api.py:1091] 2020-07-11 23:06:09,731 > []
+[DEBUG|open_api.py:1102] 2020-07-11 23:06:09,731 > in chegyul_check!!!!! all_db에서 cc가 1인놈들 확인!!!!!!!!
+[DEBUG|open_api.py:1103] 2020-07-11 23:06:09,731 > []
+[DEBUG|open_api.py:1063] 2020-07-11 23:06:09,731 > rate_check!!!
+[DEBUG|open_api.py:1067] 2020-07-11 23:06:09,732 > rate 업데이트 !!!
+[DEBUG|open_api.py:1068] 2020-07-11 23:06:09,732 > []
+[DEBUG|trader.py:58] 2020-07-11 23:06:09,733 > 매도 리스트!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[DEBUG|trader.py:59] 2020-07-11 23:06:09,733 > []
+[DEBUG|open_api.py:908] 2020-07-11 23:06:09,733 > jango_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:1460] 2020-07-11 23:06:09,733 > get_d2_deposit 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:10,034 > 8
+[DEBUG|open_api.py:255] 2020-07-11 23:06:10,059 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:10,059 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1471] 2020-07-11 23:06:10,060 > _opw00001!!!
+[DEBUG|open_api.py:1475] 2020-07-11 23:06:10,060 > 예수금!!!!
+[DEBUG|open_api.py:1476] 2020-07-11 23:06:10,061 > 000000050000000
+[DEBUG|open_api.py:916] 2020-07-11 23:06:10,061 > 돈안부족해 투자 가능!!!!!!!!
+[DEBUG|trader.py:121] 2020-07-11 23:06:10,061 > buy_time_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:930] 2020-07-11 23:06:10,062 > buy_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:935] 2020-07-11 23:06:10,063 > GoGo Buying!!!!!!
+[DEBUG|trader.py:43] 2020-07-11 23:06:10,063 > auto_trade_stock함수에 들어왔습니다!
+[DEBUG|open_api.py:988] 2020-07-11 23:06:10,064 > get_today_buy_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:990] 2020-07-11 23:06:10,064 >  self.today : 20200711 , self.date_rows_yesterday : 20200710 !
+[DEBUG|open_api.py:993] 2020-07-11 23:06:10,066 > realtime_daily_buy_list 생겼다!!!!! 
+[DEBUG|open_api.py:996] 2020-07-11 23:06:10,073 > realtime_daily_buy_list 생겼지만 아직 data가 없다!!!!! 
+[DEBUG|trader.py:111] 2020-07-11 23:06:10,374 > market_time_check!!!
+[DEBUG|trader.py:64] 2020-07-11 23:06:10,374 > auto_trade_sell_stock 함수에 들어왔습니다!
+[DEBUG|open_api.py:468] 2020-07-11 23:06:10,374 > check_balance 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:10,674 > 9
+[DEBUG|open_api.py:255] 2020-07-11 23:06:10,695 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:10,695 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1624] 2020-07-11 23:06:10,696 > _opw00018!!!
+[DEBUG|open_api.py:508] 2020-07-11 23:06:10,697 > db_to_possesed_item 함수에 들어왔습니다!
+[DEBUG|open_api.py:1048] 2020-07-11 23:06:10,790 > possess_item 테이블에는 없는데 all_item_db에 sell_date가 없는 리스트 처리!!!
+[DEBUG|open_api.py:1049] 2020-07-11 23:06:10,790 > []
+[DEBUG|trader.py:48] 2020-07-11 23:06:10,791 > get_sell_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:1085] 2020-07-11 23:06:10,791 > chegyul_check!!!
+[DEBUG|open_api.py:1090] 2020-07-11 23:06:10,792 > possess_item 테이블에는 있는데 all_item_db에 없는 종목들 처리!!!
+[DEBUG|open_api.py:1091] 2020-07-11 23:06:10,792 > []
+[DEBUG|open_api.py:1102] 2020-07-11 23:06:10,793 > in chegyul_check!!!!! all_db에서 cc가 1인놈들 확인!!!!!!!!
+[DEBUG|open_api.py:1103] 2020-07-11 23:06:10,794 > []
+[DEBUG|open_api.py:1063] 2020-07-11 23:06:10,794 > rate_check!!!
+[DEBUG|open_api.py:1067] 2020-07-11 23:06:10,794 > rate 업데이트 !!!
+[DEBUG|open_api.py:1068] 2020-07-11 23:06:10,795 > []
+[DEBUG|trader.py:58] 2020-07-11 23:06:10,796 > 매도 리스트!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[DEBUG|trader.py:59] 2020-07-11 23:06:10,796 > []
+[DEBUG|open_api.py:908] 2020-07-11 23:06:10,796 > jango_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:1460] 2020-07-11 23:06:10,796 > get_d2_deposit 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:11,096 > 10
+[DEBUG|open_api.py:255] 2020-07-11 23:06:11,114 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:11,114 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1471] 2020-07-11 23:06:11,115 > _opw00001!!!
+[DEBUG|open_api.py:1475] 2020-07-11 23:06:11,115 > 예수금!!!!
+[DEBUG|open_api.py:1476] 2020-07-11 23:06:11,115 > 000000050000000
+[DEBUG|open_api.py:916] 2020-07-11 23:06:11,116 > 돈안부족해 투자 가능!!!!!!!!
+[DEBUG|trader.py:121] 2020-07-11 23:06:11,116 > buy_time_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:930] 2020-07-11 23:06:11,116 > buy_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:935] 2020-07-11 23:06:11,117 > GoGo Buying!!!!!!
+[DEBUG|trader.py:43] 2020-07-11 23:06:11,117 > auto_trade_stock함수에 들어왔습니다!
+[DEBUG|open_api.py:988] 2020-07-11 23:06:11,117 > get_today_buy_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:990] 2020-07-11 23:06:11,117 >  self.today : 20200711 , self.date_rows_yesterday : 20200710 !
+[DEBUG|open_api.py:993] 2020-07-11 23:06:11,119 > realtime_daily_buy_list 생겼다!!!!! 
+[DEBUG|open_api.py:996] 2020-07-11 23:06:11,125 > realtime_daily_buy_list 생겼지만 아직 data가 없다!!!!! 
+[DEBUG|trader.py:111] 2020-07-11 23:06:11,426 > market_time_check!!!
+[DEBUG|trader.py:64] 2020-07-11 23:06:11,426 > auto_trade_sell_stock 함수에 들어왔습니다!
+[DEBUG|open_api.py:468] 2020-07-11 23:06:11,426 > check_balance 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:11,727 > 11
+[DEBUG|open_api.py:255] 2020-07-11 23:06:11,749 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:11,749 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1624] 2020-07-11 23:06:11,751 > _opw00018!!!
+[DEBUG|open_api.py:508] 2020-07-11 23:06:11,753 > db_to_possesed_item 함수에 들어왔습니다!
+[DEBUG|open_api.py:1048] 2020-07-11 23:06:11,854 > possess_item 테이블에는 없는데 all_item_db에 sell_date가 없는 리스트 처리!!!
+[DEBUG|open_api.py:1049] 2020-07-11 23:06:11,854 > []
+[DEBUG|trader.py:48] 2020-07-11 23:06:11,855 > get_sell_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:1085] 2020-07-11 23:06:11,855 > chegyul_check!!!
+[DEBUG|open_api.py:1090] 2020-07-11 23:06:11,856 > possess_item 테이블에는 있는데 all_item_db에 없는 종목들 처리!!!
+[DEBUG|open_api.py:1091] 2020-07-11 23:06:11,856 > []
+[DEBUG|open_api.py:1102] 2020-07-11 23:06:11,857 > in chegyul_check!!!!! all_db에서 cc가 1인놈들 확인!!!!!!!!
+[DEBUG|open_api.py:1103] 2020-07-11 23:06:11,857 > []
+[DEBUG|open_api.py:1063] 2020-07-11 23:06:11,857 > rate_check!!!
+[DEBUG|open_api.py:1067] 2020-07-11 23:06:11,858 > rate 업데이트 !!!
+[DEBUG|open_api.py:1068] 2020-07-11 23:06:11,858 > []
+[DEBUG|trader.py:58] 2020-07-11 23:06:11,860 > 매도 리스트!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[DEBUG|trader.py:59] 2020-07-11 23:06:11,860 > []
+[DEBUG|open_api.py:908] 2020-07-11 23:06:11,860 > jango_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:1460] 2020-07-11 23:06:11,860 > get_d2_deposit 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:12,160 > 12
+[DEBUG|open_api.py:255] 2020-07-11 23:06:12,176 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:12,176 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1471] 2020-07-11 23:06:12,177 > _opw00001!!!
+[DEBUG|open_api.py:1475] 2020-07-11 23:06:12,177 > 예수금!!!!
+[DEBUG|open_api.py:1476] 2020-07-11 23:06:12,177 > 000000050000000
+[DEBUG|open_api.py:916] 2020-07-11 23:06:12,178 > 돈안부족해 투자 가능!!!!!!!!
+[DEBUG|trader.py:121] 2020-07-11 23:06:12,178 > buy_time_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:930] 2020-07-11 23:06:12,178 > buy_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:935] 2020-07-11 23:06:12,179 > GoGo Buying!!!!!!
+[DEBUG|trader.py:43] 2020-07-11 23:06:12,179 > auto_trade_stock함수에 들어왔습니다!
+[DEBUG|open_api.py:988] 2020-07-11 23:06:12,179 > get_today_buy_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:990] 2020-07-11 23:06:12,179 >  self.today : 20200711 , self.date_rows_yesterday : 20200710 !
+[DEBUG|open_api.py:993] 2020-07-11 23:06:12,181 > realtime_daily_buy_list 생겼다!!!!! 
+[DEBUG|open_api.py:996] 2020-07-11 23:06:12,187 > realtime_daily_buy_list 생겼지만 아직 data가 없다!!!!! 
+[DEBUG|trader.py:111] 2020-07-11 23:06:12,488 > market_time_check!!!
+[DEBUG|trader.py:64] 2020-07-11 23:06:12,488 > auto_trade_sell_stock 함수에 들어왔습니다!
+[DEBUG|open_api.py:468] 2020-07-11 23:06:12,488 > check_balance 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:12,788 > 13
+[DEBUG|open_api.py:255] 2020-07-11 23:06:12,808 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:12,808 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1624] 2020-07-11 23:06:12,810 > _opw00018!!!
+[DEBUG|open_api.py:508] 2020-07-11 23:06:12,811 > db_to_possesed_item 함수에 들어왔습니다!
+[DEBUG|open_api.py:1048] 2020-07-11 23:06:12,915 > possess_item 테이블에는 없는데 all_item_db에 sell_date가 없는 리스트 처리!!!
+[DEBUG|open_api.py:1049] 2020-07-11 23:06:12,915 > []
+[DEBUG|trader.py:48] 2020-07-11 23:06:12,916 > get_sell_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:1085] 2020-07-11 23:06:12,916 > chegyul_check!!!
+[DEBUG|open_api.py:1090] 2020-07-11 23:06:12,917 > possess_item 테이블에는 있는데 all_item_db에 없는 종목들 처리!!!
+[DEBUG|open_api.py:1091] 2020-07-11 23:06:12,917 > []
+[DEBUG|open_api.py:1102] 2020-07-11 23:06:12,918 > in chegyul_check!!!!! all_db에서 cc가 1인놈들 확인!!!!!!!!
+[DEBUG|open_api.py:1103] 2020-07-11 23:06:12,918 > []
+[DEBUG|open_api.py:1063] 2020-07-11 23:06:12,918 > rate_check!!!
+[DEBUG|open_api.py:1067] 2020-07-11 23:06:12,919 > rate 업데이트 !!!
+[DEBUG|open_api.py:1068] 2020-07-11 23:06:12,919 > []
+[DEBUG|trader.py:58] 2020-07-11 23:06:12,920 > 매도 리스트!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[DEBUG|trader.py:59] 2020-07-11 23:06:12,921 > []
+[DEBUG|open_api.py:908] 2020-07-11 23:06:12,921 > jango_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:1460] 2020-07-11 23:06:12,921 > get_d2_deposit 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:13,222 > 14
+[DEBUG|open_api.py:255] 2020-07-11 23:06:13,245 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:13,245 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1471] 2020-07-11 23:06:13,247 > _opw00001!!!
+[DEBUG|open_api.py:1475] 2020-07-11 23:06:13,247 > 예수금!!!!
+[DEBUG|open_api.py:1476] 2020-07-11 23:06:13,247 > 000000050000000
+[DEBUG|open_api.py:916] 2020-07-11 23:06:13,249 > 돈안부족해 투자 가능!!!!!!!!
+[DEBUG|trader.py:121] 2020-07-11 23:06:13,249 > buy_time_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:930] 2020-07-11 23:06:13,250 > buy_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:935] 2020-07-11 23:06:13,252 > GoGo Buying!!!!!!
+[DEBUG|trader.py:43] 2020-07-11 23:06:13,252 > auto_trade_stock함수에 들어왔습니다!
+[DEBUG|open_api.py:988] 2020-07-11 23:06:13,253 > get_today_buy_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:990] 2020-07-11 23:06:13,253 >  self.today : 20200711 , self.date_rows_yesterday : 20200710 !
+[DEBUG|open_api.py:993] 2020-07-11 23:06:13,256 > realtime_daily_buy_list 생겼다!!!!! 
+[DEBUG|open_api.py:996] 2020-07-11 23:06:13,273 > realtime_daily_buy_list 생겼지만 아직 data가 없다!!!!! 
+[DEBUG|trader.py:111] 2020-07-11 23:06:13,575 > market_time_check!!!
+[DEBUG|trader.py:64] 2020-07-11 23:06:13,575 > auto_trade_sell_stock 함수에 들어왔습니다!
+[DEBUG|open_api.py:468] 2020-07-11 23:06:13,575 > check_balance 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:13,875 > 15
+[DEBUG|open_api.py:255] 2020-07-11 23:06:13,897 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:13,898 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1624] 2020-07-11 23:06:13,899 > _opw00018!!!
+[DEBUG|open_api.py:508] 2020-07-11 23:06:13,901 > db_to_possesed_item 함수에 들어왔습니다!
+[DEBUG|open_api.py:1048] 2020-07-11 23:06:14,026 > possess_item 테이블에는 없는데 all_item_db에 sell_date가 없는 리스트 처리!!!
+[DEBUG|open_api.py:1049] 2020-07-11 23:06:14,026 > []
+[DEBUG|trader.py:48] 2020-07-11 23:06:14,027 > get_sell_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:1085] 2020-07-11 23:06:14,027 > chegyul_check!!!
+[DEBUG|open_api.py:1090] 2020-07-11 23:06:14,028 > possess_item 테이블에는 있는데 all_item_db에 없는 종목들 처리!!!
+[DEBUG|open_api.py:1091] 2020-07-11 23:06:14,028 > []
+[DEBUG|open_api.py:1102] 2020-07-11 23:06:14,029 > in chegyul_check!!!!! all_db에서 cc가 1인놈들 확인!!!!!!!!
+[DEBUG|open_api.py:1103] 2020-07-11 23:06:14,030 > []
+[DEBUG|open_api.py:1063] 2020-07-11 23:06:14,030 > rate_check!!!
+[DEBUG|open_api.py:1067] 2020-07-11 23:06:14,031 > rate 업데이트 !!!
+[DEBUG|open_api.py:1068] 2020-07-11 23:06:14,031 > []
+[DEBUG|trader.py:58] 2020-07-11 23:06:14,032 > 매도 리스트!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[DEBUG|trader.py:59] 2020-07-11 23:06:14,032 > []
+[DEBUG|open_api.py:908] 2020-07-11 23:06:14,033 > jango_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:1460] 2020-07-11 23:06:14,033 > get_d2_deposit 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:14,334 > 16
+[DEBUG|open_api.py:255] 2020-07-11 23:06:14,356 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:14,357 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1471] 2020-07-11 23:06:14,360 > _opw00001!!!
+[DEBUG|open_api.py:1475] 2020-07-11 23:06:14,360 > 예수금!!!!
+[DEBUG|open_api.py:1476] 2020-07-11 23:06:14,361 > 000000050000000
+[DEBUG|open_api.py:916] 2020-07-11 23:06:14,362 > 돈안부족해 투자 가능!!!!!!!!
+[DEBUG|trader.py:121] 2020-07-11 23:06:14,362 > buy_time_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:930] 2020-07-11 23:06:14,363 > buy_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:935] 2020-07-11 23:06:14,366 > GoGo Buying!!!!!!
+[DEBUG|trader.py:43] 2020-07-11 23:06:14,366 > auto_trade_stock함수에 들어왔습니다!
+[DEBUG|open_api.py:988] 2020-07-11 23:06:14,366 > get_today_buy_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:990] 2020-07-11 23:06:14,367 >  self.today : 20200711 , self.date_rows_yesterday : 20200710 !
+[DEBUG|open_api.py:993] 2020-07-11 23:06:14,372 > realtime_daily_buy_list 생겼다!!!!! 
+[DEBUG|open_api.py:996] 2020-07-11 23:06:14,399 > realtime_daily_buy_list 생겼지만 아직 data가 없다!!!!! 
+[DEBUG|trader.py:111] 2020-07-11 23:06:14,700 > market_time_check!!!
+[DEBUG|trader.py:64] 2020-07-11 23:06:14,700 > auto_trade_sell_stock 함수에 들어왔습니다!
+[DEBUG|open_api.py:468] 2020-07-11 23:06:14,700 > check_balance 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:15,000 > 17
+[DEBUG|open_api.py:255] 2020-07-11 23:06:15,025 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:15,026 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1624] 2020-07-11 23:06:15,028 > _opw00018!!!
+[DEBUG|open_api.py:508] 2020-07-11 23:06:15,031 > db_to_possesed_item 함수에 들어왔습니다!
+[DEBUG|open_api.py:1048] 2020-07-11 23:06:15,153 > possess_item 테이블에는 없는데 all_item_db에 sell_date가 없는 리스트 처리!!!
+[DEBUG|open_api.py:1049] 2020-07-11 23:06:15,154 > []
+[DEBUG|trader.py:48] 2020-07-11 23:06:15,155 > get_sell_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:1085] 2020-07-11 23:06:15,155 > chegyul_check!!!
+[DEBUG|open_api.py:1090] 2020-07-11 23:06:15,156 > possess_item 테이블에는 있는데 all_item_db에 없는 종목들 처리!!!
+[DEBUG|open_api.py:1091] 2020-07-11 23:06:15,156 > []
+[DEBUG|open_api.py:1102] 2020-07-11 23:06:15,157 > in chegyul_check!!!!! all_db에서 cc가 1인놈들 확인!!!!!!!!
+[DEBUG|open_api.py:1103] 2020-07-11 23:06:15,157 > []
+[DEBUG|open_api.py:1063] 2020-07-11 23:06:15,157 > rate_check!!!
+[DEBUG|open_api.py:1067] 2020-07-11 23:06:15,158 > rate 업데이트 !!!
+[DEBUG|open_api.py:1068] 2020-07-11 23:06:15,158 > []
+[DEBUG|trader.py:58] 2020-07-11 23:06:15,159 > 매도 리스트!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[DEBUG|trader.py:59] 2020-07-11 23:06:15,159 > []
+[DEBUG|open_api.py:908] 2020-07-11 23:06:15,159 > jango_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:1460] 2020-07-11 23:06:15,159 > get_d2_deposit 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:15,461 > 18
+[DEBUG|open_api.py:255] 2020-07-11 23:06:15,485 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:15,485 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1471] 2020-07-11 23:06:15,486 > _opw00001!!!
+[DEBUG|open_api.py:1475] 2020-07-11 23:06:15,486 > 예수금!!!!
+[DEBUG|open_api.py:1476] 2020-07-11 23:06:15,486 > 000000050000000
+[DEBUG|open_api.py:916] 2020-07-11 23:06:15,487 > 돈안부족해 투자 가능!!!!!!!!
+[DEBUG|trader.py:121] 2020-07-11 23:06:15,487 > buy_time_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:930] 2020-07-11 23:06:15,487 > buy_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:935] 2020-07-11 23:06:15,489 > GoGo Buying!!!!!!
+[DEBUG|trader.py:43] 2020-07-11 23:06:15,489 > auto_trade_stock함수에 들어왔습니다!
+[DEBUG|open_api.py:988] 2020-07-11 23:06:15,489 > get_today_buy_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:990] 2020-07-11 23:06:15,489 >  self.today : 20200711 , self.date_rows_yesterday : 20200710 !
+[DEBUG|open_api.py:993] 2020-07-11 23:06:15,494 > realtime_daily_buy_list 생겼다!!!!! 
+[DEBUG|open_api.py:996] 2020-07-11 23:06:15,501 > realtime_daily_buy_list 생겼지만 아직 data가 없다!!!!! 
+[DEBUG|trader.py:111] 2020-07-11 23:06:15,802 > market_time_check!!!
+[DEBUG|trader.py:64] 2020-07-11 23:06:15,802 > auto_trade_sell_stock 함수에 들어왔습니다!
+[DEBUG|open_api.py:468] 2020-07-11 23:06:15,802 > check_balance 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:16,102 > 19
+[DEBUG|open_api.py:255] 2020-07-11 23:06:16,117 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:16,117 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1624] 2020-07-11 23:06:16,118 > _opw00018!!!
+[DEBUG|open_api.py:508] 2020-07-11 23:06:16,118 > db_to_possesed_item 함수에 들어왔습니다!
+[DEBUG|open_api.py:1048] 2020-07-11 23:06:16,208 > possess_item 테이블에는 없는데 all_item_db에 sell_date가 없는 리스트 처리!!!
+[DEBUG|open_api.py:1049] 2020-07-11 23:06:16,208 > []
+[DEBUG|trader.py:48] 2020-07-11 23:06:16,209 > get_sell_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:1085] 2020-07-11 23:06:16,210 > chegyul_check!!!
+[DEBUG|open_api.py:1090] 2020-07-11 23:06:16,211 > possess_item 테이블에는 있는데 all_item_db에 없는 종목들 처리!!!
+[DEBUG|open_api.py:1091] 2020-07-11 23:06:16,211 > []
+[DEBUG|open_api.py:1102] 2020-07-11 23:06:16,212 > in chegyul_check!!!!! all_db에서 cc가 1인놈들 확인!!!!!!!!
+[DEBUG|open_api.py:1103] 2020-07-11 23:06:16,212 > []
+[DEBUG|open_api.py:1063] 2020-07-11 23:06:16,212 > rate_check!!!
+[DEBUG|open_api.py:1067] 2020-07-11 23:06:16,213 > rate 업데이트 !!!
+[DEBUG|open_api.py:1068] 2020-07-11 23:06:16,213 > []
+[DEBUG|trader.py:58] 2020-07-11 23:06:16,214 > 매도 리스트!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[DEBUG|trader.py:59] 2020-07-11 23:06:16,214 > []
+[DEBUG|open_api.py:908] 2020-07-11 23:06:16,214 > jango_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:1460] 2020-07-11 23:06:16,214 > get_d2_deposit 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:16,515 > 20
+[DEBUG|open_api.py:255] 2020-07-11 23:06:16,532 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:16,532 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1471] 2020-07-11 23:06:16,533 > _opw00001!!!
+[DEBUG|open_api.py:1475] 2020-07-11 23:06:16,533 > 예수금!!!!
+[DEBUG|open_api.py:1476] 2020-07-11 23:06:16,533 > 000000050000000
+[DEBUG|open_api.py:916] 2020-07-11 23:06:16,534 > 돈안부족해 투자 가능!!!!!!!!
+[DEBUG|trader.py:121] 2020-07-11 23:06:16,534 > buy_time_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:930] 2020-07-11 23:06:16,534 > buy_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:935] 2020-07-11 23:06:16,535 > GoGo Buying!!!!!!
+[DEBUG|trader.py:43] 2020-07-11 23:06:16,535 > auto_trade_stock함수에 들어왔습니다!
+[DEBUG|open_api.py:988] 2020-07-11 23:06:16,535 > get_today_buy_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:990] 2020-07-11 23:06:16,535 >  self.today : 20200711 , self.date_rows_yesterday : 20200710 !
+[DEBUG|open_api.py:993] 2020-07-11 23:06:16,537 > realtime_daily_buy_list 생겼다!!!!! 
+[DEBUG|open_api.py:996] 2020-07-11 23:06:16,543 > realtime_daily_buy_list 생겼지만 아직 data가 없다!!!!! 
+[DEBUG|trader.py:111] 2020-07-11 23:06:16,844 > market_time_check!!!
+[DEBUG|trader.py:64] 2020-07-11 23:06:16,844 > auto_trade_sell_stock 함수에 들어왔습니다!
+[DEBUG|open_api.py:468] 2020-07-11 23:06:16,844 > check_balance 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:17,144 > 21
+[DEBUG|open_api.py:255] 2020-07-11 23:06:17,168 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:17,168 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1624] 2020-07-11 23:06:17,169 > _opw00018!!!
+[DEBUG|open_api.py:508] 2020-07-11 23:06:17,170 > db_to_possesed_item 함수에 들어왔습니다!
+[DEBUG|open_api.py:1048] 2020-07-11 23:06:17,248 > possess_item 테이블에는 없는데 all_item_db에 sell_date가 없는 리스트 처리!!!
+[DEBUG|open_api.py:1049] 2020-07-11 23:06:17,248 > []
+[DEBUG|trader.py:48] 2020-07-11 23:06:17,249 > get_sell_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:1085] 2020-07-11 23:06:17,249 > chegyul_check!!!
+[DEBUG|open_api.py:1090] 2020-07-11 23:06:17,250 > possess_item 테이블에는 있는데 all_item_db에 없는 종목들 처리!!!
+[DEBUG|open_api.py:1091] 2020-07-11 23:06:17,250 > []
+[DEBUG|open_api.py:1102] 2020-07-11 23:06:17,251 > in chegyul_check!!!!! all_db에서 cc가 1인놈들 확인!!!!!!!!
+[DEBUG|open_api.py:1103] 2020-07-11 23:06:17,251 > []
+[DEBUG|open_api.py:1063] 2020-07-11 23:06:17,251 > rate_check!!!
+[DEBUG|open_api.py:1067] 2020-07-11 23:06:17,252 > rate 업데이트 !!!
+[DEBUG|open_api.py:1068] 2020-07-11 23:06:17,252 > []
+[DEBUG|trader.py:58] 2020-07-11 23:06:17,253 > 매도 리스트!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[DEBUG|trader.py:59] 2020-07-11 23:06:17,253 > []
+[DEBUG|open_api.py:908] 2020-07-11 23:06:17,253 > jango_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:1460] 2020-07-11 23:06:17,253 > get_d2_deposit 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:17,553 > 22
+[DEBUG|open_api.py:255] 2020-07-11 23:06:17,579 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:17,579 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1471] 2020-07-11 23:06:17,580 > _opw00001!!!
+[DEBUG|open_api.py:1475] 2020-07-11 23:06:17,580 > 예수금!!!!
+[DEBUG|open_api.py:1476] 2020-07-11 23:06:17,580 > 000000050000000
+[DEBUG|open_api.py:916] 2020-07-11 23:06:17,581 > 돈안부족해 투자 가능!!!!!!!!
+[DEBUG|trader.py:121] 2020-07-11 23:06:17,581 > buy_time_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:930] 2020-07-11 23:06:17,581 > buy_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:935] 2020-07-11 23:06:17,582 > GoGo Buying!!!!!!
+[DEBUG|trader.py:43] 2020-07-11 23:06:17,582 > auto_trade_stock함수에 들어왔습니다!
+[DEBUG|open_api.py:988] 2020-07-11 23:06:17,582 > get_today_buy_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:990] 2020-07-11 23:06:17,582 >  self.today : 20200711 , self.date_rows_yesterday : 20200710 !
+[DEBUG|open_api.py:993] 2020-07-11 23:06:17,584 > realtime_daily_buy_list 생겼다!!!!! 
+[DEBUG|open_api.py:996] 2020-07-11 23:06:17,591 > realtime_daily_buy_list 생겼지만 아직 data가 없다!!!!! 
+[DEBUG|trader.py:111] 2020-07-11 23:06:17,891 > market_time_check!!!
+[DEBUG|trader.py:64] 2020-07-11 23:06:17,891 > auto_trade_sell_stock 함수에 들어왔습니다!
+[DEBUG|open_api.py:468] 2020-07-11 23:06:17,891 > check_balance 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:18,191 > 23
+[DEBUG|open_api.py:255] 2020-07-11 23:06:18,209 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:18,210 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1624] 2020-07-11 23:06:18,211 > _opw00018!!!
+[DEBUG|open_api.py:508] 2020-07-11 23:06:18,211 > db_to_possesed_item 함수에 들어왔습니다!
+[DEBUG|open_api.py:1048] 2020-07-11 23:06:18,293 > possess_item 테이블에는 없는데 all_item_db에 sell_date가 없는 리스트 처리!!!
+[DEBUG|open_api.py:1049] 2020-07-11 23:06:18,293 > []
+[DEBUG|trader.py:48] 2020-07-11 23:06:18,294 > get_sell_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:1085] 2020-07-11 23:06:18,294 > chegyul_check!!!
+[DEBUG|open_api.py:1090] 2020-07-11 23:06:18,295 > possess_item 테이블에는 있는데 all_item_db에 없는 종목들 처리!!!
+[DEBUG|open_api.py:1091] 2020-07-11 23:06:18,295 > []
+[DEBUG|open_api.py:1102] 2020-07-11 23:06:18,296 > in chegyul_check!!!!! all_db에서 cc가 1인놈들 확인!!!!!!!!
+[DEBUG|open_api.py:1103] 2020-07-11 23:06:18,296 > []
+[DEBUG|open_api.py:1063] 2020-07-11 23:06:18,296 > rate_check!!!
+[DEBUG|open_api.py:1067] 2020-07-11 23:06:18,297 > rate 업데이트 !!!
+[DEBUG|open_api.py:1068] 2020-07-11 23:06:18,297 > []
+[DEBUG|trader.py:58] 2020-07-11 23:06:18,298 > 매도 리스트!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[DEBUG|trader.py:59] 2020-07-11 23:06:18,299 > []
+[DEBUG|open_api.py:908] 2020-07-11 23:06:18,299 > jango_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:1460] 2020-07-11 23:06:18,299 > get_d2_deposit 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:18,599 > 24
+[DEBUG|open_api.py:255] 2020-07-11 23:06:18,616 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:18,616 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1471] 2020-07-11 23:06:18,617 > _opw00001!!!
+[DEBUG|open_api.py:1475] 2020-07-11 23:06:18,617 > 예수금!!!!
+[DEBUG|open_api.py:1476] 2020-07-11 23:06:18,617 > 000000050000000
+[DEBUG|open_api.py:916] 2020-07-11 23:06:18,618 > 돈안부족해 투자 가능!!!!!!!!
+[DEBUG|trader.py:121] 2020-07-11 23:06:18,618 > buy_time_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:930] 2020-07-11 23:06:18,618 > buy_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:935] 2020-07-11 23:06:18,619 > GoGo Buying!!!!!!
+[DEBUG|trader.py:43] 2020-07-11 23:06:18,619 > auto_trade_stock함수에 들어왔습니다!
+[DEBUG|open_api.py:988] 2020-07-11 23:06:18,619 > get_today_buy_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:990] 2020-07-11 23:06:18,620 >  self.today : 20200711 , self.date_rows_yesterday : 20200710 !
+[DEBUG|open_api.py:993] 2020-07-11 23:06:18,621 > realtime_daily_buy_list 생겼다!!!!! 
+[DEBUG|open_api.py:996] 2020-07-11 23:06:18,627 > realtime_daily_buy_list 생겼지만 아직 data가 없다!!!!! 
+[DEBUG|trader.py:111] 2020-07-11 23:06:18,928 > market_time_check!!!
+[DEBUG|trader.py:64] 2020-07-11 23:06:18,928 > auto_trade_sell_stock 함수에 들어왔습니다!
+[DEBUG|open_api.py:468] 2020-07-11 23:06:18,929 > check_balance 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:19,229 > 25
+[DEBUG|open_api.py:255] 2020-07-11 23:06:19,246 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:19,246 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1624] 2020-07-11 23:06:19,247 > _opw00018!!!
+[DEBUG|open_api.py:508] 2020-07-11 23:06:19,248 > db_to_possesed_item 함수에 들어왔습니다!
+[DEBUG|open_api.py:1048] 2020-07-11 23:06:19,326 > possess_item 테이블에는 없는데 all_item_db에 sell_date가 없는 리스트 처리!!!
+[DEBUG|open_api.py:1049] 2020-07-11 23:06:19,326 > []
+[DEBUG|trader.py:48] 2020-07-11 23:06:19,327 > get_sell_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:1085] 2020-07-11 23:06:19,327 > chegyul_check!!!
+[DEBUG|open_api.py:1090] 2020-07-11 23:06:19,328 > possess_item 테이블에는 있는데 all_item_db에 없는 종목들 처리!!!
+[DEBUG|open_api.py:1091] 2020-07-11 23:06:19,328 > []
+[DEBUG|open_api.py:1102] 2020-07-11 23:06:19,329 > in chegyul_check!!!!! all_db에서 cc가 1인놈들 확인!!!!!!!!
+[DEBUG|open_api.py:1103] 2020-07-11 23:06:19,329 > []
+[DEBUG|open_api.py:1063] 2020-07-11 23:06:19,329 > rate_check!!!
+[DEBUG|open_api.py:1067] 2020-07-11 23:06:19,330 > rate 업데이트 !!!
+[DEBUG|open_api.py:1068] 2020-07-11 23:06:19,330 > []
+[DEBUG|trader.py:58] 2020-07-11 23:06:19,331 > 매도 리스트!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[DEBUG|trader.py:59] 2020-07-11 23:06:19,331 > []
+[DEBUG|open_api.py:908] 2020-07-11 23:06:19,332 > jango_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:1460] 2020-07-11 23:06:19,332 > get_d2_deposit 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:19,632 > 26
+[DEBUG|open_api.py:255] 2020-07-11 23:06:19,649 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:19,649 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1471] 2020-07-11 23:06:19,651 > _opw00001!!!
+[DEBUG|open_api.py:1475] 2020-07-11 23:06:19,651 > 예수금!!!!
+[DEBUG|open_api.py:1476] 2020-07-11 23:06:19,651 > 000000050000000
+[DEBUG|open_api.py:916] 2020-07-11 23:06:19,652 > 돈안부족해 투자 가능!!!!!!!!
+[DEBUG|trader.py:121] 2020-07-11 23:06:19,653 > buy_time_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:930] 2020-07-11 23:06:19,653 > buy_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:935] 2020-07-11 23:06:19,654 > GoGo Buying!!!!!!
+[DEBUG|trader.py:43] 2020-07-11 23:06:19,655 > auto_trade_stock함수에 들어왔습니다!
+[DEBUG|open_api.py:988] 2020-07-11 23:06:19,655 > get_today_buy_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:990] 2020-07-11 23:06:19,655 >  self.today : 20200711 , self.date_rows_yesterday : 20200710 !
+[DEBUG|open_api.py:993] 2020-07-11 23:06:19,657 > realtime_daily_buy_list 생겼다!!!!! 
+[DEBUG|open_api.py:996] 2020-07-11 23:06:19,670 > realtime_daily_buy_list 생겼지만 아직 data가 없다!!!!! 
+[DEBUG|trader.py:111] 2020-07-11 23:06:19,971 > market_time_check!!!
+[DEBUG|trader.py:64] 2020-07-11 23:06:19,971 > auto_trade_sell_stock 함수에 들어왔습니다!
+[DEBUG|open_api.py:468] 2020-07-11 23:06:19,971 > check_balance 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:20,272 > 27
+[DEBUG|open_api.py:255] 2020-07-11 23:06:20,292 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:20,293 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1624] 2020-07-11 23:06:20,295 > _opw00018!!!
+[DEBUG|open_api.py:508] 2020-07-11 23:06:20,297 > db_to_possesed_item 함수에 들어왔습니다!
+[DEBUG|open_api.py:1048] 2020-07-11 23:06:20,430 > possess_item 테이블에는 없는데 all_item_db에 sell_date가 없는 리스트 처리!!!
+[DEBUG|open_api.py:1049] 2020-07-11 23:06:20,430 > []
+[DEBUG|trader.py:48] 2020-07-11 23:06:20,431 > get_sell_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:1085] 2020-07-11 23:06:20,432 > chegyul_check!!!
+[DEBUG|open_api.py:1090] 2020-07-11 23:06:20,432 > possess_item 테이블에는 있는데 all_item_db에 없는 종목들 처리!!!
+[DEBUG|open_api.py:1091] 2020-07-11 23:06:20,433 > []
+[DEBUG|open_api.py:1102] 2020-07-11 23:06:20,433 > in chegyul_check!!!!! all_db에서 cc가 1인놈들 확인!!!!!!!!
+[DEBUG|open_api.py:1103] 2020-07-11 23:06:20,433 > []
+[DEBUG|open_api.py:1063] 2020-07-11 23:06:20,434 > rate_check!!!
+[DEBUG|open_api.py:1067] 2020-07-11 23:06:20,434 > rate 업데이트 !!!
+[DEBUG|open_api.py:1068] 2020-07-11 23:06:20,435 > []
+[DEBUG|trader.py:58] 2020-07-11 23:06:20,435 > 매도 리스트!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[DEBUG|trader.py:59] 2020-07-11 23:06:20,436 > []
+[DEBUG|open_api.py:908] 2020-07-11 23:06:20,436 > jango_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:1460] 2020-07-11 23:06:20,436 > get_d2_deposit 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:20,736 > 28
+[DEBUG|open_api.py:255] 2020-07-11 23:06:20,754 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:20,754 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1471] 2020-07-11 23:06:20,756 > _opw00001!!!
+[DEBUG|open_api.py:1475] 2020-07-11 23:06:20,756 > 예수금!!!!
+[DEBUG|open_api.py:1476] 2020-07-11 23:06:20,756 > 000000050000000
+[DEBUG|open_api.py:916] 2020-07-11 23:06:20,757 > 돈안부족해 투자 가능!!!!!!!!
+[DEBUG|trader.py:121] 2020-07-11 23:06:20,758 > buy_time_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:930] 2020-07-11 23:06:20,758 > buy_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:935] 2020-07-11 23:06:20,759 > GoGo Buying!!!!!!
+[DEBUG|trader.py:43] 2020-07-11 23:06:20,760 > auto_trade_stock함수에 들어왔습니다!
+[DEBUG|open_api.py:988] 2020-07-11 23:06:20,760 > get_today_buy_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:990] 2020-07-11 23:06:20,760 >  self.today : 20200711 , self.date_rows_yesterday : 20200710 !
+[DEBUG|open_api.py:993] 2020-07-11 23:06:20,763 > realtime_daily_buy_list 생겼다!!!!! 
+[DEBUG|open_api.py:996] 2020-07-11 23:06:20,776 > realtime_daily_buy_list 생겼지만 아직 data가 없다!!!!! 
+[DEBUG|trader.py:111] 2020-07-11 23:06:21,077 > market_time_check!!!
+[DEBUG|trader.py:64] 2020-07-11 23:06:21,077 > auto_trade_sell_stock 함수에 들어왔습니다!
+[DEBUG|open_api.py:468] 2020-07-11 23:06:21,078 > check_balance 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:21,378 > 29
+[DEBUG|open_api.py:255] 2020-07-11 23:06:21,398 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:21,398 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1624] 2020-07-11 23:06:21,400 > _opw00018!!!
+[DEBUG|open_api.py:508] 2020-07-11 23:06:21,401 > db_to_possesed_item 함수에 들어왔습니다!
+[DEBUG|open_api.py:1048] 2020-07-11 23:06:21,502 > possess_item 테이블에는 없는데 all_item_db에 sell_date가 없는 리스트 처리!!!
+[DEBUG|open_api.py:1049] 2020-07-11 23:06:21,502 > []
+[DEBUG|trader.py:48] 2020-07-11 23:06:21,503 > get_sell_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:1085] 2020-07-11 23:06:21,503 > chegyul_check!!!
+[DEBUG|open_api.py:1090] 2020-07-11 23:06:21,504 > possess_item 테이블에는 있는데 all_item_db에 없는 종목들 처리!!!
+[DEBUG|open_api.py:1091] 2020-07-11 23:06:21,504 > []
+[DEBUG|open_api.py:1102] 2020-07-11 23:06:21,505 > in chegyul_check!!!!! all_db에서 cc가 1인놈들 확인!!!!!!!!
+[DEBUG|open_api.py:1103] 2020-07-11 23:06:21,505 > []
+[DEBUG|open_api.py:1063] 2020-07-11 23:06:21,505 > rate_check!!!
+[DEBUG|open_api.py:1067] 2020-07-11 23:06:21,506 > rate 업데이트 !!!
+[DEBUG|open_api.py:1068] 2020-07-11 23:06:21,506 > []
+[DEBUG|trader.py:58] 2020-07-11 23:06:21,507 > 매도 리스트!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[DEBUG|trader.py:59] 2020-07-11 23:06:21,507 > []
+[DEBUG|open_api.py:908] 2020-07-11 23:06:21,507 > jango_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:1460] 2020-07-11 23:06:21,507 > get_d2_deposit 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:21,809 > 30
+[DEBUG|open_api.py:255] 2020-07-11 23:06:21,835 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:21,836 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1471] 2020-07-11 23:06:21,839 > _opw00001!!!
+[DEBUG|open_api.py:1475] 2020-07-11 23:06:21,839 > 예수금!!!!
+[DEBUG|open_api.py:1476] 2020-07-11 23:06:21,840 > 000000050000000
+[DEBUG|open_api.py:916] 2020-07-11 23:06:21,842 > 돈안부족해 투자 가능!!!!!!!!
+[DEBUG|trader.py:121] 2020-07-11 23:06:21,842 > buy_time_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:930] 2020-07-11 23:06:21,842 > buy_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:935] 2020-07-11 23:06:21,844 > GoGo Buying!!!!!!
+[DEBUG|trader.py:43] 2020-07-11 23:06:21,845 > auto_trade_stock함수에 들어왔습니다!
+[DEBUG|open_api.py:988] 2020-07-11 23:06:21,845 > get_today_buy_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:990] 2020-07-11 23:06:21,846 >  self.today : 20200711 , self.date_rows_yesterday : 20200710 !
+[DEBUG|open_api.py:993] 2020-07-11 23:06:21,852 > realtime_daily_buy_list 생겼다!!!!! 
+[DEBUG|open_api.py:996] 2020-07-11 23:06:21,867 > realtime_daily_buy_list 생겼지만 아직 data가 없다!!!!! 
+[DEBUG|trader.py:111] 2020-07-11 23:06:22,168 > market_time_check!!!
+[DEBUG|trader.py:64] 2020-07-11 23:06:22,168 > auto_trade_sell_stock 함수에 들어왔습니다!
+[DEBUG|open_api.py:468] 2020-07-11 23:06:22,168 > check_balance 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:22,469 > 31
+[DEBUG|open_api.py:255] 2020-07-11 23:06:22,488 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:22,488 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1624] 2020-07-11 23:06:22,489 > _opw00018!!!
+[DEBUG|open_api.py:508] 2020-07-11 23:06:22,489 > db_to_possesed_item 함수에 들어왔습니다!
+[DEBUG|open_api.py:1048] 2020-07-11 23:06:22,590 > possess_item 테이블에는 없는데 all_item_db에 sell_date가 없는 리스트 처리!!!
+[DEBUG|open_api.py:1049] 2020-07-11 23:06:22,590 > []
+[DEBUG|trader.py:48] 2020-07-11 23:06:22,591 > get_sell_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:1085] 2020-07-11 23:06:22,591 > chegyul_check!!!
+[DEBUG|open_api.py:1090] 2020-07-11 23:06:22,592 > possess_item 테이블에는 있는데 all_item_db에 없는 종목들 처리!!!
+[DEBUG|open_api.py:1091] 2020-07-11 23:06:22,592 > []
+[DEBUG|open_api.py:1102] 2020-07-11 23:06:22,593 > in chegyul_check!!!!! all_db에서 cc가 1인놈들 확인!!!!!!!!
+[DEBUG|open_api.py:1103] 2020-07-11 23:06:22,593 > []
+[DEBUG|open_api.py:1063] 2020-07-11 23:06:22,593 > rate_check!!!
+[DEBUG|open_api.py:1067] 2020-07-11 23:06:22,594 > rate 업데이트 !!!
+[DEBUG|open_api.py:1068] 2020-07-11 23:06:22,594 > []
+[DEBUG|trader.py:58] 2020-07-11 23:06:22,595 > 매도 리스트!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[DEBUG|trader.py:59] 2020-07-11 23:06:22,596 > []
+[DEBUG|open_api.py:908] 2020-07-11 23:06:22,596 > jango_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:1460] 2020-07-11 23:06:22,596 > get_d2_deposit 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:22,897 > 32
+[DEBUG|open_api.py:255] 2020-07-11 23:06:22,915 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:22,916 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1471] 2020-07-11 23:06:22,919 > _opw00001!!!
+[DEBUG|open_api.py:1475] 2020-07-11 23:06:22,919 > 예수금!!!!
+[DEBUG|open_api.py:1476] 2020-07-11 23:06:22,920 > 000000050000000
+[DEBUG|open_api.py:916] 2020-07-11 23:06:22,922 > 돈안부족해 투자 가능!!!!!!!!
+[DEBUG|trader.py:121] 2020-07-11 23:06:22,922 > buy_time_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:930] 2020-07-11 23:06:22,922 > buy_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:935] 2020-07-11 23:06:22,929 > GoGo Buying!!!!!!
+[DEBUG|trader.py:43] 2020-07-11 23:06:22,929 > auto_trade_stock함수에 들어왔습니다!
+[DEBUG|open_api.py:988] 2020-07-11 23:06:22,929 > get_today_buy_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:990] 2020-07-11 23:06:22,930 >  self.today : 20200711 , self.date_rows_yesterday : 20200710 !
+[DEBUG|open_api.py:993] 2020-07-11 23:06:22,938 > realtime_daily_buy_list 생겼다!!!!! 
+[DEBUG|open_api.py:996] 2020-07-11 23:06:22,963 > realtime_daily_buy_list 생겼지만 아직 data가 없다!!!!! 
+[DEBUG|trader.py:111] 2020-07-11 23:06:23,263 > market_time_check!!!
+[DEBUG|trader.py:64] 2020-07-11 23:06:23,263 > auto_trade_sell_stock 함수에 들어왔습니다!
+[DEBUG|open_api.py:468] 2020-07-11 23:06:23,263 > check_balance 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:23,563 > 33
+[DEBUG|open_api.py:255] 2020-07-11 23:06:23,583 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:23,583 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1624] 2020-07-11 23:06:23,585 > _opw00018!!!
+[DEBUG|open_api.py:508] 2020-07-11 23:06:23,587 > db_to_possesed_item 함수에 들어왔습니다!
+[DEBUG|open_api.py:1048] 2020-07-11 23:06:23,701 > possess_item 테이블에는 없는데 all_item_db에 sell_date가 없는 리스트 처리!!!
+[DEBUG|open_api.py:1049] 2020-07-11 23:06:23,701 > []
+[DEBUG|trader.py:48] 2020-07-11 23:06:23,702 > get_sell_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:1085] 2020-07-11 23:06:23,703 > chegyul_check!!!
+[DEBUG|open_api.py:1090] 2020-07-11 23:06:23,703 > possess_item 테이블에는 있는데 all_item_db에 없는 종목들 처리!!!
+[DEBUG|open_api.py:1091] 2020-07-11 23:06:23,704 > []
+[DEBUG|open_api.py:1102] 2020-07-11 23:06:23,704 > in chegyul_check!!!!! all_db에서 cc가 1인놈들 확인!!!!!!!!
+[DEBUG|open_api.py:1103] 2020-07-11 23:06:23,705 > []
+[DEBUG|open_api.py:1063] 2020-07-11 23:06:23,705 > rate_check!!!
+[DEBUG|open_api.py:1067] 2020-07-11 23:06:23,706 > rate 업데이트 !!!
+[DEBUG|open_api.py:1068] 2020-07-11 23:06:23,706 > []
+[DEBUG|trader.py:58] 2020-07-11 23:06:23,707 > 매도 리스트!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[DEBUG|trader.py:59] 2020-07-11 23:06:23,707 > []
+[DEBUG|open_api.py:908] 2020-07-11 23:06:23,707 > jango_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:1460] 2020-07-11 23:06:23,707 > get_d2_deposit 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:24,008 > 34
+[DEBUG|open_api.py:255] 2020-07-11 23:06:24,033 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:24,033 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1471] 2020-07-11 23:06:24,036 > _opw00001!!!
+[DEBUG|open_api.py:1475] 2020-07-11 23:06:24,036 > 예수금!!!!
+[DEBUG|open_api.py:1476] 2020-07-11 23:06:24,036 > 000000050000000
+[DEBUG|open_api.py:916] 2020-07-11 23:06:24,037 > 돈안부족해 투자 가능!!!!!!!!
+[DEBUG|trader.py:121] 2020-07-11 23:06:24,038 > buy_time_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:930] 2020-07-11 23:06:24,038 > buy_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:935] 2020-07-11 23:06:24,040 > GoGo Buying!!!!!!
+[DEBUG|trader.py:43] 2020-07-11 23:06:24,040 > auto_trade_stock함수에 들어왔습니다!
+[DEBUG|open_api.py:988] 2020-07-11 23:06:24,041 > get_today_buy_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:990] 2020-07-11 23:06:24,041 >  self.today : 20200711 , self.date_rows_yesterday : 20200710 !
+[DEBUG|open_api.py:993] 2020-07-11 23:06:24,044 > realtime_daily_buy_list 생겼다!!!!! 
+[DEBUG|open_api.py:996] 2020-07-11 23:06:24,061 > realtime_daily_buy_list 생겼지만 아직 data가 없다!!!!! 
+[DEBUG|trader.py:111] 2020-07-11 23:06:24,361 > market_time_check!!!
+[DEBUG|trader.py:64] 2020-07-11 23:06:24,361 > auto_trade_sell_stock 함수에 들어왔습니다!
+[DEBUG|open_api.py:468] 2020-07-11 23:06:24,362 > check_balance 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:24,662 > 35
+[DEBUG|open_api.py:255] 2020-07-11 23:06:24,682 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:24,682 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1624] 2020-07-11 23:06:24,683 > _opw00018!!!
+[DEBUG|open_api.py:508] 2020-07-11 23:06:24,684 > db_to_possesed_item 함수에 들어왔습니다!
+[DEBUG|open_api.py:1048] 2020-07-11 23:06:24,781 > possess_item 테이블에는 없는데 all_item_db에 sell_date가 없는 리스트 처리!!!
+[DEBUG|open_api.py:1049] 2020-07-11 23:06:24,782 > []
+[DEBUG|trader.py:48] 2020-07-11 23:06:24,783 > get_sell_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:1085] 2020-07-11 23:06:24,783 > chegyul_check!!!
+[DEBUG|open_api.py:1090] 2020-07-11 23:06:24,785 > possess_item 테이블에는 있는데 all_item_db에 없는 종목들 처리!!!
+[DEBUG|open_api.py:1091] 2020-07-11 23:06:24,785 > []
+[DEBUG|open_api.py:1102] 2020-07-11 23:06:24,786 > in chegyul_check!!!!! all_db에서 cc가 1인놈들 확인!!!!!!!!
+[DEBUG|open_api.py:1103] 2020-07-11 23:06:24,786 > []
+[DEBUG|open_api.py:1063] 2020-07-11 23:06:24,786 > rate_check!!!
+[DEBUG|open_api.py:1067] 2020-07-11 23:06:24,787 > rate 업데이트 !!!
+[DEBUG|open_api.py:1068] 2020-07-11 23:06:24,788 > []
+[DEBUG|trader.py:58] 2020-07-11 23:06:24,789 > 매도 리스트!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[DEBUG|trader.py:59] 2020-07-11 23:06:24,789 > []
+[DEBUG|open_api.py:908] 2020-07-11 23:06:24,789 > jango_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:1460] 2020-07-11 23:06:24,790 > get_d2_deposit 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:25,090 > 36
+[DEBUG|open_api.py:255] 2020-07-11 23:06:25,110 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:25,110 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1471] 2020-07-11 23:06:25,112 > _opw00001!!!
+[DEBUG|open_api.py:1475] 2020-07-11 23:06:25,112 > 예수금!!!!
+[DEBUG|open_api.py:1476] 2020-07-11 23:06:25,113 > 000000050000000
+[DEBUG|open_api.py:916] 2020-07-11 23:06:25,114 > 돈안부족해 투자 가능!!!!!!!!
+[DEBUG|trader.py:121] 2020-07-11 23:06:25,114 > buy_time_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:930] 2020-07-11 23:06:25,114 > buy_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:935] 2020-07-11 23:06:25,116 > GoGo Buying!!!!!!
+[DEBUG|trader.py:43] 2020-07-11 23:06:25,117 > auto_trade_stock함수에 들어왔습니다!
+[DEBUG|open_api.py:988] 2020-07-11 23:06:25,117 > get_today_buy_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:990] 2020-07-11 23:06:25,117 >  self.today : 20200711 , self.date_rows_yesterday : 20200710 !
+[DEBUG|open_api.py:993] 2020-07-11 23:06:25,120 > realtime_daily_buy_list 생겼다!!!!! 
+[DEBUG|open_api.py:996] 2020-07-11 23:06:25,128 > realtime_daily_buy_list 생겼지만 아직 data가 없다!!!!! 
+[DEBUG|trader.py:111] 2020-07-11 23:06:25,428 > market_time_check!!!
+[DEBUG|trader.py:64] 2020-07-11 23:06:25,428 > auto_trade_sell_stock 함수에 들어왔습니다!
+[DEBUG|open_api.py:468] 2020-07-11 23:06:25,429 > check_balance 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:25,730 > 37
+[DEBUG|open_api.py:255] 2020-07-11 23:06:25,754 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:25,754 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1624] 2020-07-11 23:06:25,755 > _opw00018!!!
+[DEBUG|open_api.py:508] 2020-07-11 23:06:25,756 > db_to_possesed_item 함수에 들어왔습니다!
+[DEBUG|open_api.py:1048] 2020-07-11 23:06:25,835 > possess_item 테이블에는 없는데 all_item_db에 sell_date가 없는 리스트 처리!!!
+[DEBUG|open_api.py:1049] 2020-07-11 23:06:25,836 > []
+[DEBUG|trader.py:48] 2020-07-11 23:06:25,837 > get_sell_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:1085] 2020-07-11 23:06:25,837 > chegyul_check!!!
+[DEBUG|open_api.py:1090] 2020-07-11 23:06:25,839 > possess_item 테이블에는 있는데 all_item_db에 없는 종목들 처리!!!
+[DEBUG|open_api.py:1091] 2020-07-11 23:06:25,840 > []
+[DEBUG|open_api.py:1102] 2020-07-11 23:06:25,841 > in chegyul_check!!!!! all_db에서 cc가 1인놈들 확인!!!!!!!!
+[DEBUG|open_api.py:1103] 2020-07-11 23:06:25,841 > []
+[DEBUG|open_api.py:1063] 2020-07-11 23:06:25,841 > rate_check!!!
+[DEBUG|open_api.py:1067] 2020-07-11 23:06:25,842 > rate 업데이트 !!!
+[DEBUG|open_api.py:1068] 2020-07-11 23:06:25,843 > []
+[DEBUG|trader.py:58] 2020-07-11 23:06:25,844 > 매도 리스트!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[DEBUG|trader.py:59] 2020-07-11 23:06:25,844 > []
+[DEBUG|open_api.py:908] 2020-07-11 23:06:25,844 > jango_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:1460] 2020-07-11 23:06:25,844 > get_d2_deposit 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:26,145 > 38
+[DEBUG|open_api.py:255] 2020-07-11 23:06:26,167 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:26,167 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1471] 2020-07-11 23:06:26,168 > _opw00001!!!
+[DEBUG|open_api.py:1475] 2020-07-11 23:06:26,169 > 예수금!!!!
+[DEBUG|open_api.py:1476] 2020-07-11 23:06:26,169 > 000000050000000
+[DEBUG|open_api.py:916] 2020-07-11 23:06:26,169 > 돈안부족해 투자 가능!!!!!!!!
+[DEBUG|trader.py:121] 2020-07-11 23:06:26,170 > buy_time_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:930] 2020-07-11 23:06:26,170 > buy_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:935] 2020-07-11 23:06:26,171 > GoGo Buying!!!!!!
+[DEBUG|trader.py:43] 2020-07-11 23:06:26,171 > auto_trade_stock함수에 들어왔습니다!
+[DEBUG|open_api.py:988] 2020-07-11 23:06:26,171 > get_today_buy_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:990] 2020-07-11 23:06:26,171 >  self.today : 20200711 , self.date_rows_yesterday : 20200710 !
+[DEBUG|open_api.py:993] 2020-07-11 23:06:26,173 > realtime_daily_buy_list 생겼다!!!!! 
+[DEBUG|open_api.py:996] 2020-07-11 23:06:26,181 > realtime_daily_buy_list 생겼지만 아직 data가 없다!!!!! 
+[DEBUG|trader.py:111] 2020-07-11 23:06:26,482 > market_time_check!!!
+[DEBUG|trader.py:64] 2020-07-11 23:06:26,482 > auto_trade_sell_stock 함수에 들어왔습니다!
+[DEBUG|open_api.py:468] 2020-07-11 23:06:26,482 > check_balance 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:26,782 > 39
+[DEBUG|open_api.py:255] 2020-07-11 23:06:26,804 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:26,804 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1624] 2020-07-11 23:06:26,805 > _opw00018!!!
+[DEBUG|open_api.py:508] 2020-07-11 23:06:26,806 > db_to_possesed_item 함수에 들어왔습니다!
+[DEBUG|open_api.py:1048] 2020-07-11 23:06:26,898 > possess_item 테이블에는 없는데 all_item_db에 sell_date가 없는 리스트 처리!!!
+[DEBUG|open_api.py:1049] 2020-07-11 23:06:26,898 > []
+[DEBUG|trader.py:48] 2020-07-11 23:06:26,899 > get_sell_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:1085] 2020-07-11 23:06:26,899 > chegyul_check!!!
+[DEBUG|open_api.py:1090] 2020-07-11 23:06:26,900 > possess_item 테이블에는 있는데 all_item_db에 없는 종목들 처리!!!
+[DEBUG|open_api.py:1091] 2020-07-11 23:06:26,900 > []
+[DEBUG|open_api.py:1102] 2020-07-11 23:06:26,901 > in chegyul_check!!!!! all_db에서 cc가 1인놈들 확인!!!!!!!!
+[DEBUG|open_api.py:1103] 2020-07-11 23:06:26,901 > []
+[DEBUG|open_api.py:1063] 2020-07-11 23:06:26,901 > rate_check!!!
+[DEBUG|open_api.py:1067] 2020-07-11 23:06:26,901 > rate 업데이트 !!!
+[DEBUG|open_api.py:1068] 2020-07-11 23:06:26,902 > []
+[DEBUG|trader.py:58] 2020-07-11 23:06:26,902 > 매도 리스트!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[DEBUG|trader.py:59] 2020-07-11 23:06:26,903 > []
+[DEBUG|open_api.py:908] 2020-07-11 23:06:26,903 > jango_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:1460] 2020-07-11 23:06:26,903 > get_d2_deposit 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:27,203 > 40
+[DEBUG|open_api.py:255] 2020-07-11 23:06:27,220 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:27,220 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1471] 2020-07-11 23:06:27,221 > _opw00001!!!
+[DEBUG|open_api.py:1475] 2020-07-11 23:06:27,221 > 예수금!!!!
+[DEBUG|open_api.py:1476] 2020-07-11 23:06:27,221 > 000000050000000
+[DEBUG|open_api.py:916] 2020-07-11 23:06:27,221 > 돈안부족해 투자 가능!!!!!!!!
+[DEBUG|trader.py:121] 2020-07-11 23:06:27,222 > buy_time_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:930] 2020-07-11 23:06:27,222 > buy_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:935] 2020-07-11 23:06:27,223 > GoGo Buying!!!!!!
+[DEBUG|trader.py:43] 2020-07-11 23:06:27,223 > auto_trade_stock함수에 들어왔습니다!
+[DEBUG|open_api.py:988] 2020-07-11 23:06:27,223 > get_today_buy_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:990] 2020-07-11 23:06:27,223 >  self.today : 20200711 , self.date_rows_yesterday : 20200710 !
+[DEBUG|open_api.py:993] 2020-07-11 23:06:27,224 > realtime_daily_buy_list 생겼다!!!!! 
+[DEBUG|open_api.py:996] 2020-07-11 23:06:27,230 > realtime_daily_buy_list 생겼지만 아직 data가 없다!!!!! 
+[DEBUG|trader.py:111] 2020-07-11 23:06:27,531 > market_time_check!!!
+[DEBUG|trader.py:64] 2020-07-11 23:06:27,531 > auto_trade_sell_stock 함수에 들어왔습니다!
+[DEBUG|open_api.py:468] 2020-07-11 23:06:27,532 > check_balance 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:27,832 > 41
+[DEBUG|open_api.py:255] 2020-07-11 23:06:27,852 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:27,852 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1624] 2020-07-11 23:06:27,853 > _opw00018!!!
+[DEBUG|open_api.py:508] 2020-07-11 23:06:27,853 > db_to_possesed_item 함수에 들어왔습니다!
+[DEBUG|open_api.py:1048] 2020-07-11 23:06:27,925 > possess_item 테이블에는 없는데 all_item_db에 sell_date가 없는 리스트 처리!!!
+[DEBUG|open_api.py:1049] 2020-07-11 23:06:27,925 > []
+[DEBUG|trader.py:48] 2020-07-11 23:06:27,926 > get_sell_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:1085] 2020-07-11 23:06:27,926 > chegyul_check!!!
+[DEBUG|open_api.py:1090] 2020-07-11 23:06:27,927 > possess_item 테이블에는 있는데 all_item_db에 없는 종목들 처리!!!
+[DEBUG|open_api.py:1091] 2020-07-11 23:06:27,927 > []
+[DEBUG|open_api.py:1102] 2020-07-11 23:06:27,928 > in chegyul_check!!!!! all_db에서 cc가 1인놈들 확인!!!!!!!!
+[DEBUG|open_api.py:1103] 2020-07-11 23:06:27,928 > []
+[DEBUG|open_api.py:1063] 2020-07-11 23:06:27,928 > rate_check!!!
+[DEBUG|open_api.py:1067] 2020-07-11 23:06:27,929 > rate 업데이트 !!!
+[DEBUG|open_api.py:1068] 2020-07-11 23:06:27,929 > []
+[DEBUG|trader.py:58] 2020-07-11 23:06:27,930 > 매도 리스트!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[DEBUG|trader.py:59] 2020-07-11 23:06:27,930 > []
+[DEBUG|open_api.py:908] 2020-07-11 23:06:27,930 > jango_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:1460] 2020-07-11 23:06:27,930 > get_d2_deposit 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:28,230 > 42
+[DEBUG|open_api.py:255] 2020-07-11 23:06:28,248 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:28,248 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1471] 2020-07-11 23:06:28,249 > _opw00001!!!
+[DEBUG|open_api.py:1475] 2020-07-11 23:06:28,249 > 예수금!!!!
+[DEBUG|open_api.py:1476] 2020-07-11 23:06:28,249 > 000000050000000
+[DEBUG|open_api.py:916] 2020-07-11 23:06:28,250 > 돈안부족해 투자 가능!!!!!!!!
+[DEBUG|trader.py:121] 2020-07-11 23:06:28,250 > buy_time_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:930] 2020-07-11 23:06:28,250 > buy_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:935] 2020-07-11 23:06:28,251 > GoGo Buying!!!!!!
+[DEBUG|trader.py:43] 2020-07-11 23:06:28,251 > auto_trade_stock함수에 들어왔습니다!
+[DEBUG|open_api.py:988] 2020-07-11 23:06:28,251 > get_today_buy_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:990] 2020-07-11 23:06:28,251 >  self.today : 20200711 , self.date_rows_yesterday : 20200710 !
+[DEBUG|open_api.py:993] 2020-07-11 23:06:28,252 > realtime_daily_buy_list 생겼다!!!!! 
+[DEBUG|open_api.py:996] 2020-07-11 23:06:28,259 > realtime_daily_buy_list 생겼지만 아직 data가 없다!!!!! 
+[DEBUG|trader.py:111] 2020-07-11 23:06:28,560 > market_time_check!!!
+[DEBUG|trader.py:64] 2020-07-11 23:06:28,560 > auto_trade_sell_stock 함수에 들어왔습니다!
+[DEBUG|open_api.py:468] 2020-07-11 23:06:28,560 > check_balance 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:28,860 > 43
+[DEBUG|open_api.py:255] 2020-07-11 23:06:28,882 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:28,882 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1624] 2020-07-11 23:06:28,883 > _opw00018!!!
+[DEBUG|open_api.py:508] 2020-07-11 23:06:28,884 > db_to_possesed_item 함수에 들어왔습니다!
+[DEBUG|open_api.py:1048] 2020-07-11 23:06:28,968 > possess_item 테이블에는 없는데 all_item_db에 sell_date가 없는 리스트 처리!!!
+[DEBUG|open_api.py:1049] 2020-07-11 23:06:28,969 > []
+[DEBUG|trader.py:48] 2020-07-11 23:06:28,970 > get_sell_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:1085] 2020-07-11 23:06:28,970 > chegyul_check!!!
+[DEBUG|open_api.py:1090] 2020-07-11 23:06:28,972 > possess_item 테이블에는 있는데 all_item_db에 없는 종목들 처리!!!
+[DEBUG|open_api.py:1091] 2020-07-11 23:06:28,972 > []
+[DEBUG|open_api.py:1102] 2020-07-11 23:06:28,973 > in chegyul_check!!!!! all_db에서 cc가 1인놈들 확인!!!!!!!!
+[DEBUG|open_api.py:1103] 2020-07-11 23:06:28,973 > []
+[DEBUG|open_api.py:1063] 2020-07-11 23:06:28,973 > rate_check!!!
+[DEBUG|open_api.py:1067] 2020-07-11 23:06:28,975 > rate 업데이트 !!!
+[DEBUG|open_api.py:1068] 2020-07-11 23:06:28,975 > []
+[DEBUG|trader.py:58] 2020-07-11 23:06:28,976 > 매도 리스트!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[DEBUG|trader.py:59] 2020-07-11 23:06:28,976 > []
+[DEBUG|open_api.py:908] 2020-07-11 23:06:28,976 > jango_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:1460] 2020-07-11 23:06:28,976 > get_d2_deposit 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:29,278 > 44
+[DEBUG|open_api.py:255] 2020-07-11 23:06:29,299 > _receive_msg 함수에 들어왔습니다!
+[DEBUG|open_api.py:263] 2020-07-11 23:06:29,299 > [00Z310] 모의투자 조회가 완료되었습니다
+[DEBUG|open_api.py:1471] 2020-07-11 23:06:29,300 > _opw00001!!!
+[DEBUG|open_api.py:1475] 2020-07-11 23:06:29,300 > 예수금!!!!
+[DEBUG|open_api.py:1476] 2020-07-11 23:06:29,300 > 000000050000000
+[DEBUG|open_api.py:916] 2020-07-11 23:06:29,301 > 돈안부족해 투자 가능!!!!!!!!
+[DEBUG|trader.py:121] 2020-07-11 23:06:29,301 > buy_time_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:930] 2020-07-11 23:06:29,301 > buy_check 함수에 들어왔습니다!
+[DEBUG|open_api.py:935] 2020-07-11 23:06:29,302 > GoGo Buying!!!!!!
+[DEBUG|trader.py:43] 2020-07-11 23:06:29,302 > auto_trade_stock함수에 들어왔습니다!
+[DEBUG|open_api.py:988] 2020-07-11 23:06:29,302 > get_today_buy_list 함수에 들어왔습니다!
+[DEBUG|open_api.py:990] 2020-07-11 23:06:29,302 >  self.today : 20200711 , self.date_rows_yesterday : 20200710 !
+[DEBUG|open_api.py:993] 2020-07-11 23:06:29,304 > realtime_daily_buy_list 생겼다!!!!! 
+[DEBUG|open_api.py:996] 2020-07-11 23:06:29,310 > realtime_daily_buy_list 생겼지만 아직 data가 없다!!!!! 
+[DEBUG|trader.py:111] 2020-07-11 23:06:29,610 > market_time_check!!!
+[DEBUG|trader.py:64] 2020-07-11 23:06:29,610 > auto_trade_sell_stock 함수에 들어왔습니다!
+[DEBUG|open_api.py:468] 2020-07-11 23:06:29,611 > check_balance 함수에 들어왔습니다!
+[DEBUG|open_api.py:1035] 2020-07-11 23:06:29,911 > 45

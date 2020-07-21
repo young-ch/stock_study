@@ -141,7 +141,7 @@ class Trader(QMainWindow):
                 # 1. 잔액이 있는지 여부 확인
                 # 2. 매수 하는 시간 인지 확인
                 # 3. 매수 정지 옵션이 체크 되었는지 확인
-                if self.open_api.jango_check() and self.buy_time_check() and self.open_api.buy_check() :
+                if self.open_api.jango_check() and self.buy_time_check() and self.open_api.buy_check():
                     # 1,2,3 조건 모두 문제 없으면 매수 시작
                     self.auto_trade_stock()
 

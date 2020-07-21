@@ -8,6 +8,7 @@ from PyQt5.QtWidgets import *
 from library.daily_buy_list import *
 # from library.logging_pack import *
 from pandas import DataFrame
+from kind_crawling import *
 
 MARKET_KOSPI = 0
 MARKET_KOSDAQ = 10
@@ -19,6 +20,7 @@ class collector_api():
         self.open_api = open_api()
         self.variable_setting()
         self.engine_JB = self.open_api.engine_JB
+        self.kind = KINDCrawler()
 
     # 업데이트가 금일 제대로 끝났는지 확인
     def variable_setting(self):
@@ -77,6 +79,8 @@ class collector_api():
         # min_craw db (분별 데이터) 업데이트
         if rows[0][8] != self.open_api.today:
             self.min_crawler_check()
+
+        self.kind.craw()
 
         logger.debug("collector api end!!!!!!!!!!!!!!!!!!!")
         # cmd 콘솔창 종료
@@ -157,6 +161,8 @@ class collector_api():
             code_name = target_code[i][1]
 
             logger.debug("++++++++++++++" + str(code_name) + "++++++++++++++++++++" + str(i + 1) + '/' + str(num))
+
+            print("------------set_min_crawler_table----들어오기 전---------------------------")
 
             check_item_gubun = self.set_min_crawler_table(code, code_name)
 
@@ -326,6 +332,8 @@ class collector_api():
     def set_min_crawler_table(self, code, code_name):
         df = self.open_api.get_total_data_min(code, code_name, self.open_api.today)
 
+        print("------------set_min_crawler_table----들어왔니????---------------------------")
+
         df_temp = DataFrame(df,
                             columns=['date', 'check_item', 'code', 'code_name', 'd1_diff_rate', 'close', 'open', 'high',
                                      'low',
@@ -416,6 +424,8 @@ class collector_api():
                  'vol5', 'vol10', 'vol20', 'vol40', 'vol60', 'vol80', 'vol100', 'vol120']].fillna(0).astype(int)
         temp_date = self.open_api.craw_db_last_min
 
+        print("------------temp_date = self.open_api.craw_db_last_min---------------------------")
+
         sum_volume = self.open_api.craw_db_last_min_sum_volume
         for i in range(0, len(df_temp)):
             try:
@@ -433,8 +443,12 @@ class collector_api():
             except Exception as e:
                 logger.critical(e)
 
+        print("------------df_temp.to_sql 들어가기 전--------------------------")
+
         df_temp.to_sql(name=code_name, con=self.open_api.engine_craw, if_exists='append')
         # 콜렉팅하다가 max_api_call 횟수까지 가게 된 경우는 다시 콜렉팅 못한 정보를 가져와야 하니까 check_item_gubun=0
+
+        print("------------df_temp.to_sql 들어가기 후--------------------------")
         if self.open_api.rq_count == cf.max_api_call - 1:
             check_item_gubun = 0
         else:

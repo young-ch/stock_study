@@ -15,7 +15,7 @@ db_port='3306'
 imi1_accout="8135287911"
 
 # imi1_simul_num은 알고리즘의 번호이다. 새로운 알고리즘으로 새롭게 database를 구축해서 운영하고 싶을 경우 번호를 2, 3, 4 ... 순차적으로 올려 주면 된다.
-imi1_simul_num=1
+imi1_simul_num=3
 imi1_db_name = "JackBot"+str(imi1_simul_num)+"_imi1"
 
 
@@ -38,7 +38,7 @@ TR_REQ_TIME_INTERVAL = 0.3
 TR_REQ_TIME_INTERVAL_LONG = 1
 
 # api를 최대 몇 번까지 호출 하고 봇을 끌지 설정 하는 옵션
-max_api_call = 98
+max_api_call = 999
 
 # dart api key
-dart_api_key = ''
+dart_api_key = '7c18d3d6860814ff28114f36d0dfd59ad030294f'

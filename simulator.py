@@ -7,6 +7,7 @@ class simulator():
         self.print_info()
         self.input_value()
 
+
     def print_info(self):
         # 시뮬레이터 번호 설정
         self.simul_num = int(input("시뮬레이팅 할 알고리즘 번호를 입력 하세요: "))

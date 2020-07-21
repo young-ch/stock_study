@@ -150,28 +150,47 @@ class simulator_func_mysql():
 
         elif self.simul_num == 3:
             # 시뮬레이팅 시작 일자
-            self.simul_start_date = "20200601"
+            self.simul_start_date = "20200701"
+
+            #거래량 배수 입력
+            self.vol_mul = 3 # 3배
+
+            #전날 종가보다 많이 오를때
+            self.d1_diff = 2
+
+            #분단위 거래
+            self.use_min = False
 
             ######### 알고리즘 선택 #############
             # 매수 리스트 설정 알고리즘 번호
-            self.db_to_realtime_daily_buy_list_num = 1
+            self.db_to_realtime_daily_buy_list_num = 3
+
+            #거래대금
+            #self.total_transaction_price = 1000000000
+
+            self.only_nine_buy = False
+
+            self.interval_month = 3
+
             # 매도 리스트 설정 알고리즘 번호
             self.sell_list_num = 2
             ###################################
             # 초기 투자자금
-            self.start_invest_price = 10000000
+            self.start_invest_price = 30000000
             # 매수 금액
-            self.invest_unit = 1000000
+            self.invest_unit = 2000000
             # 자산 중 최소로 남겨 둘 금액
-            self.limit_money = 1000000
+            self.limit_money = 100000
             # # 익절 수익률 기준치
-            self.sell_point = 6
+            self.sell_point = 5
             # 손절 수익률 기준치
-            self.losscut_point = -2
+            self.losscut_point = -3
             # 실전/모의 봇 돌릴 때 매수하는 순간 종목의 최신 종가 보다 1% 이상 오른 경우 사지 않도록 하는 설정(변경 가능)
             self.invest_limit_rate = 1.01
             # 실전/모의 봇 돌릴 때 매수하는 순간 종목의 최신 종가 보다 -2% 이하로 떨어진 경우 사지 않도록 하는 설정(변경 가능)
             self.invest_min_limit_rate = 0.98
+
+
         #########################################################################################################################
         self.db_name_setting()
 
@@ -471,12 +490,34 @@ class simulator_func_mysql():
             realtime_daily_buy_list = self.engine_daily_buy_list.execute(sql % (self.invest_unit)).fetchall()
 
 
+
         elif self.db_to_realtime_daily_buy_list_num == 3:
             sql = "select * from `" + date_rows_yesterday + "` a where yes_clo20 > yes_clo5 and clo5 > clo20 " \
-                                                            "and volume >= 300000 " \
-                                                            "and NOT exists (select null from stock_konex b where a.code=b.code) " \
-                                                            "and close < '%s' group by code"
-            realtime_daily_buy_list = self.engine_daily_buy_list.execute(sql % (self.invest_unit)).fetchall()
+                            "and NOT exists(select null from stock_konex b where a.code = b.code) " \
+                            "and NOT exists(select null from stock_managing c where a.code = c.code and c.code_name != '' group by c.code)" \
+                            "and NOT exists(select null from stock_insincerity d where a.code = d.code and d.code_name != '' group by d.code)" \
+                            "and NOT exists(select null from stock_invest_caution e where a.code = e.code and DATE_SUB('%s', INTERVAL '%s' MONTH ) < e.post_date and e.post_date < DATE('%s') and e.type != '투자경고 지정해제' group by e.code)" \
+                            "and NOT exists(select null from stock_invest_warning f where a.code = f.code and f.post_date <= DATE('%s') and (f.cleared_date > DATE('%s') or f.cleared_date is null) group by f.code)" \
+                            "and NOT exists(select null from stock_invest_danger g where a.code = g.code and g.post_date <= DATE('%s') and (g.cleared_date > DATE('%s') or g.cleared_date is null) group by g.code)" \
+
+
+            realtime_daily_buy_list = self.engine_daily_buy_list.execute(sql % (date_rows_yesterday, self.interval_month, date_rows_yesterday, date_rows_yesterday, date_rows_yesterday, date_rows_yesterday, date_rows_yesterday)).fetchall()
+
+        # 거래량이 급증한 경우 매수 하는 알고리즘
+        elif self.db_to_realtime_daily_buy_list_num == 4:
+            sql = "select * from `" + date_rows_yesterday + "` a where yes_clo20 > yes_clo5 and clo5 > clo20 and volume * close >= '%s' " \
+                                                        "and vol20 * '%s' < volume and d1_diff_rate > '%s' " \
+                                                        "and NOT exists(select null from stock_konex b where a.code = b.code) " \
+                                                        "and NOT exists(select null from stock_managing c where a.code = c.code and c.code_name != '' group by c.code)" \
+                                                        "and NOT exists(select null from stock_insincerity d where a.code = d.code and d.code_name != '' group by d.code)" \
+                                                        "and NOT exists(select null from stock_invest_caution e where a.code = e.code and DATE_SUB('%s', INTERVAL '%s' MONTH ) < e.post_date and e.post_date < DATE('%s') and e.type != '투자경고 지정해제' group by e.code)" \
+                                                        "and NOT exists(select null from stock_invest_warning f where a.code = f.code and f.post_date <= DATE('%s') and (f.cleared_date > DATE('%s') or f.cleared_date is null) group by f.code)" \
+                                                        "and NOT exists(select null from stock_invest_danger g where a.code = g.code and g.post_date <= DATE('%s') and (g.cleared_date > DATE('%s') or g.cleared_date is null) group by g.code)" \
+                                                        "order by volume * close desc"
+
+            realtime_daily_buy_list = self.engine_daily_buy_list.execute(sql % ( self.total_transaction_price , self.vol_mul , self.d1_diff ,date_rows_yesterday, self.interval_month, date_rows_yesterday, date_rows_yesterday, date_rows_yesterday, date_rows_yesterday, date_rows_yesterday)).fetchall()
+
+
         # 매수 알고리즘을 추가하는 곳
 
             # 아래 명령을 통해 테이블로 부터 데이터를 가져오면 리스트 형태로 realtime_daily_buy_list 에 담긴다.

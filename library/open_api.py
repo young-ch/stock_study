@@ -543,6 +543,9 @@ class open_api(QAxWidget):
     # code: 종목코드(ex. '005930' )
     # date : 기준일자. (ex. '20200424') => 20200424 일자 까지의 모든 open, high, low, close, volume 데이터 출력
     def get_total_data_min(self, code, code_name, start):
+
+        print("------------get_total_data_min----들어왔니????---------------------------")
+
         self.ohlcv = defaultdict(list)
 
         self.set_input_value("종목코드", code)
@@ -562,6 +565,7 @@ class open_api(QAxWidget):
             self.craw_db_last_min_sum_volume = 0
 
         while self.remained_data == True:
+
             time.sleep(TR_REQ_TIME_INTERVAL)
             self.set_input_value("종목코드", code)
             self.set_input_value("틱범위", 1)
@@ -572,6 +576,8 @@ class open_api(QAxWidget):
             if self.ohlcv['date'][-1] < self.craw_db_last_min:
                 break
 
+
+        
         time.sleep(TR_REQ_TIME_INTERVAL)
 
         if len(self.ohlcv['date']) == 0 or self.ohlcv['date'][0] == '':

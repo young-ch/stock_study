@@ -1,7 +1,7 @@
 @Echo off
 @Echo trader Start
 set x=0
-call C:\ProgramData\Anaconda3\Scripts\activate.bat C:\ProgramData\Anaconda3
+call "%HOMEPATH%\Anaconda3\Scripts\activate.bat" py37_32
 @taskkill /f /im python.exe /fi "memusage gt 40" 2>NUL | findstr 성공 >NUL
 
 :repeat
@@ -10,7 +10,6 @@ IF %ErrorLevel%==1 goto 1
 IF NOT %ErrorLevel%==1 goto 0
 
 :0
-IF x==1 goto 1
 set /a x=%x%+1
 echo x : %x%
 ::echo max : %max%
@@ -21,6 +20,6 @@ goto repeat
 set x=0
 set max=700
 
-start python %~dp0/../trader.py
+start python "%~dp0/../trader.py"
 timeout 5 > NUL
 goto repeat

@@ -1,9 +1,13 @@
-# -*- conding: utf-8 -*-
+ver = "#version 1.3.1"
+print(f"daily_buy_list Version: {ver}")
+
 # import open_api
+from sqlalchemy import event
 
 from library.daily_crawler import *
 from library import cf
 from pandas import DataFrame
+from .open_api import escape_percentage
 
 MARKET_KOSPI = 0
 MARKET_KOSDAQ = 10
@@ -23,6 +27,9 @@ class daily_buy_list():
         self.engine_daily_buy_list = create_engine(
             "mysql+mysqldb://" + cf.db_id + ":" + cf.db_passwd + "@" + cf.db_ip + ":" + cf.db_port + "/daily_buy_list",
             encoding='utf-8')
+
+        event.listen(self.engine_daily_craw, 'before_execute', escape_percentage, retval=True)
+        event.listen(self.engine_daily_buy_list, 'before_execute', escape_percentage, retval=True)
 
     def date_rows_setting(self):
         print("date_rows_setting!!")
@@ -64,9 +71,9 @@ class daily_buy_list():
                         print("daily_craw db에 " + str(code_name) + " 테이블이 존재하지 않는다 !!")
                         continue
 
-                    sql = "select * from `" + self.stock_item_all[i][0] + "` where date = '%s' group by date"
+                    sql = "select * from `" + self.stock_item_all[i][0] + "` where date = '{}' group by date"
                     # daily_craw에서 해당 날짜의 row를 한 줄 가져오는 것
-                    rows = self.engine_daily_craw.execute(sql % (self.date_rows[k][0])).fetchall()
+                    rows = self.engine_daily_craw.execute(sql.format(self.date_rows[k][0])).fetchall()
                     multi_list += rows
 
                 if len(multi_list) != 0:

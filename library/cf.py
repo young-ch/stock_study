@@ -42,3 +42,5 @@ max_api_call = 999
 
 # dart api key
 dart_api_key = '7c18d3d6860814ff28114f36d0dfd59ad030294f'
+
+use_etf = False

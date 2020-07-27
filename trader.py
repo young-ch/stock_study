@@ -1,8 +1,10 @@
-#-*- coding: utf-8 -*-
+# version 1.3.1
+# -*- coding: utf-8 -*-
 from library.open_api import *
 from PyQt5.QtWidgets import *
 
 logger.debug("trader start !!!!!!")
+
 
 class Trader(QMainWindow):
     def __init__(self):
@@ -17,7 +19,7 @@ class Trader(QMainWindow):
 
     # 변수 설정 함수
     def variable_setting(self):
-        self.open_api.py_gubun ="trader"
+        self.open_api.py_gubun = "trader"
         ################ 모의, 실전 ####################
         # 장시작 시간 설정
         # self.market_start_time = QTime(9, 0, 0)
@@ -52,12 +54,10 @@ class Trader(QMainWindow):
         self.open_api.chegyul_check()
         # all_item_db에 rate를 업데이트 한다.
         self.open_api.rate_check()
-
-
-        self.sell_list = self.open_api.sf.get_sell_list()
+        self.open_api.sf.get_date_for_simul()
+        self.sell_list = self.open_api.sf.get_sell_list(len(self.open_api.sf.date_rows))
         logger.debug("매도 리스트!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
         logger.debug(self.sell_list)
-
 
     # 매도 함수
     def auto_trade_sell_stock(self):
@@ -87,18 +87,21 @@ class Trader(QMainWindow):
             logger.debug("매도 수익률: !!" + str(get_sell_rate))
             logger.debug("매도 수량: !!" + str(get_sell_num))
 
-
-            if get_sell_code != False and get_sell_code != "0" and get_sell_code != 0 :
-                if get_sell_rate < 0 :
-                    logger.debug("손절!!!!$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ " + str(get_sell_code) + " $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-                    self.open_api.send_order("send_order_req", "0101", self.open_api.account_number, 2, get_sell_code, get_sell_num, 0, "03", "")
+            if get_sell_code != False and get_sell_code != "0" and get_sell_code != 0:
+                if get_sell_rate < 0:
+                    logger.debug("손절!!!!$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ " + str(
+                        get_sell_code) + " $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+                    self.open_api.send_order("send_order_req", "0101", self.open_api.account_number, 2, get_sell_code,
+                                             get_sell_num, 0, "03", "")
                 else:
-                    logger.debug("익절 매도!!!!$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ "+str(get_sell_code)+ " $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-                        # 03 : 시장가 매도
-                        # 2 : 신규매도
-                        # 0 : price 인데 시장가니까 0으로
-                        # get_sell_num : 종목 보유 수량
-                    self.open_api.send_order("send_order_req", "0101", self.open_api.account_number, 2, get_sell_code, get_sell_num, 0, "03", "")
+                    logger.debug("익절 매도!!!!$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ " + str(
+                        get_sell_code) + " $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+                    # 03 : 시장가 매도
+                    # 2 : 신규매도
+                    # 0 : price 인데 시장가니까 0으로
+                    # get_sell_num : 종목 보유 수량
+                    self.open_api.send_order("send_order_req", "0101", self.open_api.account_number, 2, get_sell_code,
+                                             get_sell_num, 0, "03", "")
 
             else:
                 print("code가 없다!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
@@ -120,7 +123,7 @@ class Trader(QMainWindow):
     def buy_time_check(self):
         logger.debug("buy_time_check 함수에 들어왔습니다!")
         self.current_time = QTime.currentTime()
-        if self.current_time < self.buy_end_time :
+        if self.current_time < self.buy_end_time:
             return True
         else:
             logger.debug("설정한 매수 시간이 끝났습니다!")
@@ -135,7 +138,7 @@ class Trader(QMainWindow):
             # 날짜 세팅
             self.open_api.date_setting()
             # 시간 체크
-            if self.market_time_check() :
+            if self.market_time_check():
                 # 우선 조건에 맞으면 매도
                 self.auto_trade_sell_stock()
                 # 1. 잔액이 있는지 여부 확인
@@ -145,9 +148,8 @@ class Trader(QMainWindow):
                     # 1,2,3 조건 모두 문제 없으면 매수 시작
                     self.auto_trade_stock()
 
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     trader = Trader()
     trader.run()
-
-

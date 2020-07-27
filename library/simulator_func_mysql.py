@@ -129,18 +129,18 @@ class simulator_func_mysql():
 
             ######### 알고리즘 선택 #############
             # 매수 리스트 설정 알고리즘 번호
-            self.db_to_realtime_daily_buy_list_num = 1
+            self.db_to_realtime_daily_buy_list_num = 3
             # 매도 리스트 설정 알고리즘 번호
             self.sell_list_num = 2
             ###################################
             # 초기 투자자금
-            self.start_invest_price = 10000000
+            self.start_invest_price = 50000000
             # 매수 금액
-            self.invest_unit = 1000000
+            self.invest_unit = 2000000
             # 자산 중 최소로 남겨 둘 금액
-            self.limit_money = 1000000
+            self.limit_money = 100000
             # # 익절 수익률 기준치
-            self.sell_point = False
+            self.sell_point = 10
             # 손절 수익률 기준치
             self.losscut_point = -2
             # 실전/모의 봇 돌릴 때 매수하는 순간 종목의 최신 종가 보다 1% 이상 오른 경우 사지 않도록 하는 설정(변경 가능)
@@ -150,13 +150,7 @@ class simulator_func_mysql():
 
         elif self.simul_num == 3:
             # 시뮬레이팅 시작 일자
-            self.simul_start_date = "20200701"
-
-            #거래량 배수 입력
-            self.vol_mul = 3 # 3배
-
-            #전날 종가보다 많이 오를때
-            self.d1_diff = 2
+            self.simul_start_date = "20200615"
 
             #분단위 거래
             self.use_min = False
@@ -165,8 +159,49 @@ class simulator_func_mysql():
             # 매수 리스트 설정 알고리즘 번호
             self.db_to_realtime_daily_buy_list_num = 3
 
-            #거래대금
-            #self.total_transaction_price = 1000000000
+            self.only_nine_buy = False
+
+            self.interval_month = 1
+
+            # 매도 리스트 설정 알고리즘 번호
+            self.sell_list_num = 2
+            ###################################
+            # 초기 투자자금
+            self.start_invest_price = 50000000
+
+            # 매수 금액
+            self.invest_unit = 2000000
+
+            # 자산 중 최소로 남겨 둘 금액
+            self.limit_money = 100000
+            # # 익절 수익률 기준치
+            self.sell_point = 8
+            # 손절 수익률 기준치
+            self.losscut_point = -2
+            # 실전/모의 봇 돌릴 때 매수하는 순간 종목의 최신 종가 보다 1% 이상 오른 경우 사지 않도록 하는 설정(변경 가능)
+            self.invest_limit_rate = 1.01
+            # 실전/모의 봇 돌릴 때 매수하는 순간 종목의 최신 종가 보다 -2% 이하로 떨어진 경우 사지 않도록 하는 설정(변경 가능)
+            self.invest_min_limit_rate = 0.98
+
+        elif self.simul_num == 4:
+            # 시뮬레이팅 시작 일자
+            self.simul_start_date = "20200701"
+
+            # 거래량 배수 입력
+            self.vol_mul = 3  # 3배
+
+            # 전날 종가보다 많이 오를때
+            self.d1_diff = 2
+
+            # 분단위 거래
+            self.use_min = False
+
+            ######### 알고리즘 선택 #############
+            # 매수 리스트 설정 알고리즘 번호
+            self.db_to_realtime_daily_buy_list_num = 4
+
+            # 거래대금
+            self.total_transaction_price = 1000000000
 
             self.only_nine_buy = False
 
@@ -176,20 +211,72 @@ class simulator_func_mysql():
             self.sell_list_num = 2
             ###################################
             # 초기 투자자금
-            self.start_invest_price = 30000000
+            self.start_invest_price = 50000000
+
             # 매수 금액
             self.invest_unit = 2000000
+
             # 자산 중 최소로 남겨 둘 금액
             self.limit_money = 100000
             # # 익절 수익률 기준치
-            self.sell_point = 5
+            self.sell_point = 8
             # 손절 수익률 기준치
-            self.losscut_point = -3
+            self.losscut_point = -2
             # 실전/모의 봇 돌릴 때 매수하는 순간 종목의 최신 종가 보다 1% 이상 오른 경우 사지 않도록 하는 설정(변경 가능)
             self.invest_limit_rate = 1.01
             # 실전/모의 봇 돌릴 때 매수하는 순간 종목의 최신 종가 보다 -2% 이하로 떨어진 경우 사지 않도록 하는 설정(변경 가능)
             self.invest_min_limit_rate = 0.98
 
+        # 절대 모멘텀 / 상대 모멘텀
+        elif self.simul_num in (7,8,9,10) :
+
+            self.simul_start_date = "20200701"
+
+            # 거래량 배수 입력
+            self.vol_mul = 3  # 3배
+
+            # 전날 종가보다 많이 오를때
+            self.d1_diff = 2
+
+            self.start_invest_price = 50000000
+
+            # 매수 금액
+            self.invest_unit = 2000000
+
+            # 자산 중 최소로 남겨 둘 금액
+            self.limit_money = 100000
+
+            # 매수 리스트 설정 알고리즘 번호(절대모멘텀 code ver)
+            self.db_to_realtime_daily_buy_list_num = 7
+            # 매도 리스트 설정 알고리즘 번호(절대모멘텀 code ver)
+            self.sell_list_num = 4
+            # n일 전 종가 데이터를 가져올지 설정 (ex. 20 -> 장이 열리는 날 기준 20일 이니까 기간으로 보면 약 한 달, 250일->1년)
+            self.day_before = 100 # 단위 일
+            # n일 전 종가 대비 현재 종가(현재가)가 몇 프로 증가 했을 때 매수, 몇 프로 떨어졌을 때 매도 할 지 설정(0으로 설정 시 단순히 증가 했을 때 매수, 감소 했을 때 매도)
+            self.diff_point = 1 # 단위 %
+            # 분별 시뮬레이션 옵션
+            # self.use_min = True
+            # self.only_nine_buy = True
+
+            if self.simul_num == 8:
+                # 매수 리스트 설정 알고리즘 번호 (절대모멘텀 query ver)
+                self.db_to_realtime_daily_buy_list_num = 8
+                # 매도 리스트 설정 알고리즘 번호 (절대모멘텀 query ver)
+                self.sell_list_num = 5
+
+            elif self.simul_num == 9 :
+                # 매수 리스트 설정 알고리즘 번호 (절대모멘텀 query ver)
+                self.db_to_realtime_daily_buy_list_num = 8
+                # 매도 리스트 설정 알고리즘 번호 (절대모멘텀 query ver + losscut point 추가)
+                self.sell_list_num = 6
+                # 손절 수익률 기준치
+                self.losscut_point = -2
+
+            elif self.simul_num == 10:
+                # 매수 리스트 설정 알고리즘 번호 (상대모멘텀 query ver)
+                self.db_to_realtime_daily_buy_list_num = 9
+                # 매도 리스트 설정 알고리즘 번호 (절대모멘텀 query ver + losscut point 추가)
+                self.sell_list_num = 5
 
         #########################################################################################################################
         self.db_name_setting()
@@ -503,7 +590,7 @@ class simulator_func_mysql():
 
             realtime_daily_buy_list = self.engine_daily_buy_list.execute(sql % (date_rows_yesterday, self.interval_month, date_rows_yesterday, date_rows_yesterday, date_rows_yesterday, date_rows_yesterday, date_rows_yesterday)).fetchall()
 
-        # 거래량이 급증한 경우 매수 하는 알고리즘
+        # 거래량이 급증한 경우 매수 하는 알고리즘  (상승장 컨셉)
         elif self.db_to_realtime_daily_buy_list_num == 4:
             sql = "select * from `" + date_rows_yesterday + "` a where yes_clo20 > yes_clo5 and clo5 > clo20 and volume * close >= '%s' " \
                                                         "and vol20 * '%s' < volume and d1_diff_rate > '%s' " \
@@ -515,8 +602,73 @@ class simulator_func_mysql():
                                                         "and NOT exists(select null from stock_invest_danger g where a.code = g.code and g.post_date <= DATE('%s') and (g.cleared_date > DATE('%s') or g.cleared_date is null) group by g.code)" \
                                                         "order by volume * close desc"
 
-            realtime_daily_buy_list = self.engine_daily_buy_list.execute(sql % ( self.total_transaction_price , self.vol_mul , self.d1_diff ,date_rows_yesterday, self.interval_month, date_rows_yesterday, date_rows_yesterday, date_rows_yesterday, date_rows_yesterday, date_rows_yesterday)).fetchall()
+            realtime_daily_buy_list = self.engine_daily_buy_list.execute(sql % (self.total_transaction_price, self.vol_mul , self.d1_diff ,date_rows_yesterday, self.interval_month, date_rows_yesterday, date_rows_yesterday, date_rows_yesterday, date_rows_yesterday, date_rows_yesterday)).fetchall()
 
+        # 매수함수
+        # # 절대 모멘텀 전략 : 특정일 전의 종가 보다 n% 이상 상승한 종목 매수 (code version)
+        elif self.db_to_realtime_daily_buy_list_num == 7:
+            # 아래에서 필터링 된 매수종목을 append 해주기 위해 비어있는 리스트를 만들어준다.
+            realtime_daily_buy_list = []
+
+            if i < self.day_before + 1:
+                pass
+            else:
+                sql = "SELECT * FROM `" + date_rows_yesterday +"` a " \
+                       "WHERE NOT exists (SELECT null FROM stock_konex b WHERE a.code=b.code) " \
+                       "AND close < '%s' "
+                # realtime_daily_buy_list_temp 로 일단 위 조건의 종목을을받는다.
+                realtime_daily_buy_list_temp = self.engine_daily_buy_list.execute(sql % (self.invest_unit)).fetchall()
+                for row in realtime_daily_buy_list_temp:
+                    # 종목코드
+                    code = row[4]
+                    # 어제 종가
+                    yes_close = row[7]
+                    # date_rows_yesterday 가 self.date_rows[i-1] 값이다.
+                    # 어제 일자 기준 n 일전 날짜
+                    date_before = self.date_rows[i-1-self.day_before][0]
+                    # 어제 일자 기준 n 일전 종가
+                    date_before_close = self.get_now_close_price_by_date(code, date_before)
+                    if date_before_close != 0 and date_before_close != False :
+                        # 모멘텀 계산 : n일전 종가 대비 수익률
+                        diff_point_calc = (yes_close - date_before_close) / date_before_close * 100
+                        # 모멘텀(수익률)이 self.diff_point 보다 높을 경우 realtime_daily_buy_list에 append
+                        if diff_point_calc > self.diff_point:
+                            realtime_daily_buy_list.append(row)
+
+
+        # 절대 모멘텀 전략 : 특정일 전의 종가 보다 n% 이상 상승한 종목 매수 (query vesrion)
+        elif self.db_to_realtime_daily_buy_list_num == 8:
+            if i < self.day_before + 1:
+                realtime_daily_buy_list = []
+                pass
+            else:
+                date_before = self.date_rows[i - 1 - self.day_before][0]
+                sql = "SELECT YES_DAY.* " \
+                      "FROM `"+date_before+"` BEFORE_DAY, `" + date_rows_yesterday +"` YES_DAY "\
+                        "WHERE BEFORE_DAY.code = YES_DAY.code "\
+                        "AND (YES_DAY.close - BEFORE_DAY.close) / BEFORE_DAY.close * 100 > '%s' " \
+                        "AND NOT exists (SELECT null FROM stock_konex b WHERE YES_DAY.code=b.code)" \
+                        "AND YES_DAY.close < '%s'"
+
+                realtime_daily_buy_list = self.engine_daily_buy_list.execute(sql % (self.diff_point, self.invest_unit)).fetchall()
+
+        # 상대 모멘텀 전략 : 특정일 전의 종가 보다 n% 이상 상승한 종목 중 가장 많이 상승한 종목 순으로 매수 (내림차순) (query version)
+        elif self.db_to_realtime_daily_buy_list_num == 9:
+            if i < self.day_before + 1:
+                realtime_daily_buy_list = []
+                pass
+            else:
+                date_before = self.date_rows[i - 1 - self.day_before][0]
+                sql = "SELECT YES_DAY.* " \
+                      "FROM `" + date_before + "` BEFORE_DAY, `" + date_rows_yesterday + "` YES_DAY " \
+                     "WHERE BEFORE_DAY.code = YES_DAY.code " \
+                     "AND (YES_DAY.close - BEFORE_DAY.close) / BEFORE_DAY.close * 100 > '%s' " \
+                     "AND NOT exists (SELECT null FROM stock_konex b WHERE YES_DAY.code=b.code)" \
+                     "AND YES_DAY.close < '%s'" \
+                     "ORDER BY (YES_DAY.close - BEFORE_DAY.close) / BEFORE_DAY.close * 100 DESC"
+
+                realtime_daily_buy_list = self.engine_daily_buy_list.execute(
+                    sql % (self.diff_point, self.invest_unit)).fetchall()
 
         # 매수 알고리즘을 추가하는 곳
 
@@ -976,6 +1128,8 @@ class simulator_func_mysql():
 
     # 언제 종목을 팔지(익절, 손절) 결정 하는 알고리즘.
     # !@##############################################################################################################################
+
+    #def get_sell_list(self, i):
     def get_sell_list(self):
         print("get_sell_list!!!")
         # 단순히 현재 보유 종목의 수익률이
@@ -1020,8 +1174,8 @@ class simulator_func_mysql():
         self.check_balance()
 
     # 매도를 하기 위한 함수
+    #def auto_trade_sell_stock(self, date, _i):
     def auto_trade_sell_stock(self, date):
-
         # 매도 할 리스트를 가져오는 함수
         sell_list = self.get_sell_list()
         for i in range(len(sell_list)):
@@ -1305,6 +1459,7 @@ class simulator_func_mysql():
 
     # 분별 시뮬레이팅 함수
     # 새로운 종목 매수 및 보유한 종목의 데이터를 업데이트 하는 함수, 매도 함수도 포함
+    #def trading_by_min(self, date_rows_today, date_rows_yesterday, i):
     def trading_by_min(self, date_rows_today, date_rows_yesterday):
         self.print_info(date_rows_today)
         # 분별 시간 데이터를 가져온다.
@@ -1319,6 +1474,7 @@ class simulator_func_mysql():
                     self.update_all_db_by_min(min)
                     self.update_all_db_etc()
                     # 매도 함수
+                    #self.auto_trade_sell_stock(min, i)
                     self.auto_trade_sell_stock(min)
                     # self.buy_stop 이 False 이고, 보유 자산이 있으면 실제 매수를 한다.
                     if not self.buy_stop and self.jango_check():
@@ -1348,6 +1504,7 @@ class simulator_func_mysql():
                 date_rows_today) + " 데이터가 존재 하지 않는다! self.simul_start_date 날짜를 변경 하세요! (분별 데이터는 콜렉터에서 최근 1년 데이터만 가져옵니다! ")
 
     # 새로운 종목 매수 및 보유한 종목의 데이터를 업데이트 하는 함수, 매도 함수도 포함
+    #def trading_by_date(self, date_rows_today, date_rows_yesterday, i):
     def trading_by_date(self, date_rows_today, date_rows_yesterday):
         self.print_info(date_rows_today)
 
@@ -1358,6 +1515,7 @@ class simulator_func_mysql():
             # 보유 중인 종목들의 주가 이외의 기타 정보들을 업데이트 하는 함수
             self.update_all_db_etc()
             # 매도 함수
+            #self.auto_trade_sell_stock(date_rows_today, i)
             self.auto_trade_sell_stock(date_rows_today)
 
             # 보유 자산이 있다면, 실제 매수를 한다.
@@ -1385,6 +1543,7 @@ class simulator_func_mysql():
             # 우선 매수리스트를 가져온다.
             self.db_to_realtime_daily_buy_list(date_rows_today, date_rows_yesterday, i)
             # 분별 시뮬레이팅 시작한다.
+            #self.trading_by_min(date_rows_today, date_rows_yesterday, i)
             self.trading_by_min(date_rows_today, date_rows_yesterday)
             self.db_to_jango(date_rows_today)
         else:
@@ -1400,6 +1559,7 @@ class simulator_func_mysql():
             # 당일 매수 할 종목들을 realtime_daily_buy_list 테이블에 세팅
             self.db_to_realtime_daily_buy_list(date_rows_today, date_rows_yesterday, i)
             # 트레이딩(매수, 매도) 함수 + 보유 종목의 현재가 업데이트 함수
+            #self.trading_by_date(date_rows_today, date_rows_yesterday, i)
             self.trading_by_date(date_rows_today, date_rows_yesterday)
             # 일별 정산
             self.db_to_jango(date_rows_today)

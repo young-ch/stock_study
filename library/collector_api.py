@@ -1,12 +1,12 @@
-# -*- conding: utf-8 -*-
-# version 1.2.0
+ver = "#version 1.3.2"
+print(f"collector_api Version: {ver}")
 
+import numpy
 from library.open_api import *
 import os
 import time
 from PyQt5.QtWidgets import *
 from library.daily_buy_list import *
-# from library.logging_pack import *
 from pandas import DataFrame
 from kind_crawling import *
 
@@ -25,7 +25,6 @@ class collector_api():
     # 업데이트가 금일 제대로 끝났는지 확인
     def variable_setting(self):
         self.open_api.py_gubun = "collector"
-        self.start_date_rows = '20190827'
         self.dc = daily_crawler(self.open_api.cf.real_db_name, self.open_api.cf.real_daily_craw_db_name,
                                 self.open_api.cf.real_daily_buy_list_db_name)
         self.dbl = daily_buy_list()
@@ -54,12 +53,6 @@ class collector_api():
             self.open_api.db_to_possesed_item()
             self.open_api.setting_data_possesed_item()
 
-        if rows[0][4] != self.open_api.today:
-            # 매수했는데 all_item_db에 없는 종목들 넣어준다.
-            self.open_api.chegyul_check()
-            # 매도 했는데 bot이 꺼져있을때 매도해서 all_item_db에 sell_date에 오늘 일자가 안 찍힌 종목들에 date 값을 넣어 준다. (이때 sell_rate는 0.0으로 찍힌다.)
-            self.open_api.final_chegyul_check()
-
         # 당일 종목별 실현 손익 db
         if rows[0][3] != self.open_api.today:
             self.db_to_today_profit_list()
@@ -72,6 +65,13 @@ class collector_api():
         if rows[0][9] != self.open_api.today:
             self.daily_buy_list_check()
 
+        # [촬영 후 순서 변경] daily_buy_list db업데이트 이 후에 들어가야함
+        if rows[0][4] != self.open_api.today:
+            # 매수했는데 all_item_db에 없는 종목들 넣어준다.
+            self.open_api.chegyul_check()
+            # 매도 했는데 bot이 꺼져있을때 매도해서 all_item_db에 sell_date에 오늘 일자가 안 찍힌 종목들에 date 값을 넣어 준다. (이때 sell_rate는 0.0으로 찍힌다.)
+            self.open_api.final_chegyul_check()
+
         # 내일 매수 종목 업데이트 (realtime_daily_buy_list)
         if rows[0][6] != self.open_api.today:
             self.realtime_daily_buy_list_check()
@@ -82,34 +82,35 @@ class collector_api():
 
         self.kind.craw()
 
-        logger.debug("collector api end!!!!!!!!!!!!!!!!!!!")
+        logger.debug("collecting 작업을 모두 정상적으로 마쳤습니다.")
+
         # cmd 콘솔창 종료
         os.system("@taskkill /f /im cmd.exe")
-        # python 콘솔창 종료
-        os.system("@taskkill /f /im python.exe")
 
-    def date_rows_setting(self):
-        logger.debug("date_rows_setting!!")
-        sql = "select date from `삼성전자` where date>'%s' group by date"
-        self.date_rows = self.open_api.engine_daily_craw.execute(sql % (self.start_date_rows)).fetchall()
+        # # AI 알고리즘 적용
+        # if self.open_api.sf.use_ai:
+        #     path = pathlib.Path(__file__).parent.parent.absolute() / 'bat' / 'ai_filter.bat'
+        #     os.system(f"start {path} {self.open_api.db_name} {self.open_api.simul_num}")
 
-    # 실전 봇, 모의 봇 매수 종목 세팅 함수
+    # 실전 봇, 모의 봇 매수 종목 세팅 + all_item_db 업데이트 함수
     def realtime_daily_buy_list_check(self):
         if self.open_api.sf.is_date_exist(self.open_api.today):
-            logger.debug("오늘 날짜 기준 daily_buy_list가 있다!!")
-            # self.open_api.today, self.open_api.today, 0 을 파라미터로 보내는 이유
+            logger.debug("daily_buy_list DB에 {} 테이블이 있습니다. jackbot DB에 realtime_daily_buy_list 테이블을 생성합니다".format(self.open_api.today))
+
+            self.open_api.sf.get_date_for_simul()
+            # 첫 번째 파라미터는 여기서는 의미가 없다.
             # 두 번째 파라미터에 오늘 일자를 넣는 이유는 매수를 하는 시점인 내일 기준으로 date_rows_yesterday가 오늘 이기 때문
-            # 첫 번째, 세번 째 파라미터는 여기서는 의미가 없다. 아무 값이나 넣어도 상관 없음.
-            self.open_api.sf.db_to_realtime_daily_buy_list(self.open_api.today, self.open_api.today, 0)
+            self.open_api.sf.db_to_realtime_daily_buy_list(self.open_api.today, self.open_api.today, len(self.open_api.sf.date_rows) - 1)
+
 
             # all_item_db에서 open, clo5~120, volume 등을 오늘 일자 데이터로 업데이트 한다.
             self.open_api.sf.update_all_db_by_date(self.open_api.today)
-
+            self.open_api.rate_check()
             # realtime_daily_buy_list(매수 리스트) 테이블 세팅을 완료 했으면 아래 쿼리를 통해 setting_data의 today_buy_list에 오늘 날짜를 찍는다.
             sql = "UPDATE setting_data SET today_buy_list='%s' limit 1"
             self.engine_JB.execute(sql % (self.open_api.today))
         else:
-            logger.debug("오늘 날짜 기준 daily_buy_list가 없다!!")
+            logger.debug("daily_buy_list DB에 {} 테이블이 없습니다. jackbot DB에 realtime_daily_buy_list 테이블을 생성 할 수 없습니다. (주말에는 생성 불가 - daily_buy_list에 날짜 테이블을 만들지 않기 때문) ".format(self.open_api.today))
 
     def is_table_exist_daily_buy_list(self, date):
         sql = "select 1 from information_schema.tables where table_schema ='daily_buy_list' and table_name = '%s'"
@@ -121,8 +122,8 @@ class collector_api():
             return False
 
     def is_table_exist(self, db_name, table_name):
-        sql = "select 1 from information_schema.tables where table_schema ='" + db_name + "' and table_name = '%s'"
-        rows = self.open_api.engine_craw.execute(sql % (table_name)).fetchall()
+        sql = "select 1 from information_schema.tables where table_schema ='{}' and table_name = '{}'"
+        rows = self.open_api.engine_craw.execute(sql.format(db_name, table_name)).fetchall()
         if len(rows) == 1:
             # logger.debug("is_table_exist True!!")
             return True
@@ -137,11 +138,6 @@ class collector_api():
 
         sql = "UPDATE setting_data SET daily_buy_list='%s' limit 1"
         self.engine_JB.execute(sql % (self.open_api.today))
-
-    def get_stock_item_all(self):
-        logger.debug("get_stock_item_all!!!!!!")
-        sql = "select code_name,code from stock_item_all"
-        self.stock_item_all = self.engine_JB.execute(sql).fetchall()
 
     # min_craw데이터베이스를 구축
     def db_to_min_craw(self):
@@ -162,16 +158,9 @@ class collector_api():
 
             logger.debug("++++++++++++++" + str(code_name) + "++++++++++++++++++++" + str(i + 1) + '/' + str(num))
 
-            print("------------set_min_crawler_table----들어오기 전---------------------------")
-
             check_item_gubun = self.set_min_crawler_table(code, code_name)
 
             self.open_api.engine_daily_buy_list.execute(sql % (check_item_gubun, code))
-
-        # 오늘 리스트 다 뽑았으면 today를 setting_data에 체크
-
-        sql = "UPDATE setting_data SET min_crawler='%s' limit 1"
-        self.engine_JB.execute(sql % (self.open_api.today))
 
     def db_to_daily_craw(self):
         logger.debug("db_to_daily_craw 함수에 들어왔습니다!")
@@ -215,7 +204,6 @@ class collector_api():
 
     def get_code_list(self):
         self.dc.cc.get_item()
-
         self.dc.cc.get_item_kospi()
         self.dc.cc.get_item_kosdaq()
         self.dc.cc.get_item_konex()
@@ -324,15 +312,41 @@ class collector_api():
 
         # 오늘 리스트 다 뽑았으면 today를 setting_data에 체크
 
+        if cf.use_etf:
+            df_stock_etf_temp = {'id': [], 'code': [], 'code_name': [], 'check_item': []}
+            self.df_stock_etf = DataFrame(df_stock_etf_temp,
+                                          columns=['code', 'code_name', 'check_item'],
+                                          index=df_stock_etf_temp['id'])
+
+            etf_list = [(c, self.open_api.dynamicCall(f'GetMasterCodeName("{c}")').replace('%', '%%'))
+                        for c in self._get_code_list_by_market(8) if c]
+            for i, (c, c_name) in enumerate(etf_list):
+                self.df_stock_etf.loc[i, 'code'] = c
+                self.df_stock_etf.loc[i, 'code_name'] = c_name
+                self.df_stock_etf.loc[i, 'check_item'] = 0
+
+            self.df_stock_etf.to_sql('stock_etf', self.open_api.engine_daily_buy_list, if_exists='replace')
+            last_index, = self.open_api.engine_daily_buy_list.execute("""
+                SELECT `index` FROM stock_item_all ORDER BY `index` DESC limit 1
+            """).first()
+
+            for c, c_name in etf_list:
+                last_index += 1
+                self.open_api.engine_daily_buy_list.execute(f"""
+                    INSERT INTO stock_item_all
+                    VALUES ({last_index}, "{c}", "{c_name}", 0, 0, 0)
+                """)
+
         sql = "UPDATE setting_data SET code_update='%s' limit 1"
         self.engine_JB.execute(sql % (self.open_api.today))
-        # self.open_api.jackbot_db_con.commit()
+
+    def _get_code_list_by_market(self, market_num):
+        codes = self.open_api.dynamicCall(f'GetCodeListByMarket("{market_num}")')
+        return codes.split(';')
 
     # 틱(1분 별) 데이터를 가져오는 함수
     def set_min_crawler_table(self, code, code_name):
         df = self.open_api.get_total_data_min(code, code_name, self.open_api.today)
-
-        print("------------set_min_crawler_table----들어왔니????---------------------------")
 
         df_temp = DataFrame(df,
                             columns=['date', 'check_item', 'code', 'code_name', 'd1_diff_rate', 'close', 'open', 'high',
@@ -352,8 +366,8 @@ class collector_api():
         df_temp['code'] = code
         # # 뒤에 0없애기 (초)
         df_temp['code_name'] = code_name
-        df_temp['d1_diff_rate'] = round(
-            (df_temp['close'] - df_temp['close'].shift(1)) / df_temp['close'].shift(1) * 100, 2)
+        d1_diff_rate = round((df_temp['close'] - df_temp['close'].shift(1)) / df_temp['close'].shift(1) * 100, 2)
+        df_temp['d1_diff_rate'] = d1_diff_rate.replace(numpy.inf, numpy.nan)
 
         # 하나씩 추가할때는 append 아니면 replace
         clo5 = df_temp['close'].rolling(window=5).mean()
@@ -424,12 +438,10 @@ class collector_api():
                  'vol5', 'vol10', 'vol20', 'vol40', 'vol60', 'vol80', 'vol100', 'vol120']].fillna(0).astype(int)
         temp_date = self.open_api.craw_db_last_min
 
-        print("------------temp_date = self.open_api.craw_db_last_min---------------------------")
-
         sum_volume = self.open_api.craw_db_last_min_sum_volume
         for i in range(0, len(df_temp)):
             try:
-                # index가 역순이라 거꾸로 되어있어어 아래처럼
+                # index가 역순이라 거꾸로 되어있어서 아래처럼
                 temp_index = len(df_temp) - i - 1
 
                 if ((int(df_temp.loc[temp_index, 'date']) - int(temp_date)) > 9000):
@@ -443,12 +455,8 @@ class collector_api():
             except Exception as e:
                 logger.critical(e)
 
-        print("------------df_temp.to_sql 들어가기 전--------------------------")
-
         df_temp.to_sql(name=code_name, con=self.open_api.engine_craw, if_exists='append')
         # 콜렉팅하다가 max_api_call 횟수까지 가게 된 경우는 다시 콜렉팅 못한 정보를 가져와야 하니까 check_item_gubun=0
-
-        print("------------df_temp.to_sql 들어가기 후--------------------------")
         if self.open_api.rq_count == cf.max_api_call - 1:
             check_item_gubun = 0
         else:
@@ -752,12 +760,12 @@ class collector_api():
                 logger.debug("today_profit_list total_losscut 이 비었다!!!! ")
 
         # 이건 오늘 산게 아니더라도 익절한놈들
-        sql = "select count(*) from (select code from all_item_db where sell_rate >='%s' and sell_date like '%s' group by code order by sell_date desc) temp"
+        sql = "select count(*) from (select code from all_item_db where sell_rate >='%s' and sell_date like '%s' group by code) temp"
         rows = self.engine_JB.execute(sql % (0, self.open_api.today + "%%")).fetchall()
 
         jango.loc[0, 'total_profitcut_count'] = int(rows[0][0])
 
-        sql = "select count(*) from (select code from all_item_db where sell_rate < '%s' and sell_date like '%s' group by code order by sell_date desc) temp"
+        sql = "select count(*) from (select code from all_item_db where sell_rate < '%s' and sell_date like '%s' group by code) temp"
         rows = self.engine_JB.execute(sql % (0, self.open_api.today + "%%")).fetchall()
 
         jango.loc[0, 'total_losscut_count'] = int(rows[0][0])
@@ -996,9 +1004,3 @@ class collector_api():
         self.transaction_info()
 
         return 0
-
-
-if __name__ == "__main__":
-    # try:
-    app = QApplication(sys.argv)
-    collector_api()

@@ -1010,12 +1010,12 @@ class open_api(QAxWidget):
 
         # 고급챕터에서 수업 진행 시 아래 주석을 풀어주세요!
         # # naver 실시간 크롤링 매수,  현재 시간이 buy_start_time(매수 시작 시간) 을 지나는 순간 매수 시작
-        # if self.sf.use_realtime_crawl:
-        #     if self.sf.buy_start_time <= QTime.currentTime():
-        #         # 전달 되는 인자 값들은 today, yesterday, i(self.date_rows 인덱스)
-        #         self.sf.db_to_realtime_daily_buy_list(self.today, self.sf.date_rows[-1][0], len(self.sf.date_rows))
-        #     else:
-        #         return
+        if self.sf.use_realtime_crawl:
+             if self.sf.buy_start_time <= QTime.currentTime():
+                 # 전달 되는 인자 값들은 today, yesterday, i(self.date_rows 인덱스)
+                 self.sf.db_to_realtime_daily_buy_list(self.today, self.sf.date_rows[-1][0], len(self.sf.date_rows))
+             else:
+                 return
 
         if self.sf.is_simul_table_exist(self.db_name, "realtime_daily_buy_list"):
             logger.debug("realtime_daily_buy_list 생겼다!!!!! ")

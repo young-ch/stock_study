@@ -98,7 +98,7 @@ def ai_filter(ai_filter_num, engine, until=datetime.datetime.today()):
             "loss": "mae", # loss : 최적화 과정에서 최소화될 손실 함수(loss function)를 설정 # mae : mean absolute error (평균 절대 오차)
             "optimizer": "adam", # optimizer : 최적화 알고리즘 선택
             "batch_size": 64, # 각 학습 반복에 사용할 데이터 샘플 수
-            "epochs": 2, # 몇 번 테스트 할지
+            "epochs": 100, # 몇 번 테스트 할지
             "ratio_cut": 3, #단위:(%) lookup_step 기간 뒤 ratio_cut(%) 만큼 증가 할 것이 예측 된다면 매수
             "table": "daily_craw",  #분석 시 daily_craw(일별데이터)를 이용 할지 min_craw(분별데이터)를 이용 할지 선택. ** 주의: min_craw 선택 시 최근 1년 데이터만 있기 때문에 simulator_func_mysql.py에서 self.simul_start_date를 최근 1년 전으로 설정 필요
             "is_used_predicted_close" : True # ratio(예상 상승률) 계산 시 예측 그래프의 close 값을 이용 할 경우 True, 실제 close 값을 이용할 시 False

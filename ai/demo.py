@@ -16,7 +16,7 @@ conn = pymysql.connect(host=cf.db_ip,
                        cursorclass=pymysql.cursors.DictCursor)
 
 FEATURE_COLUMNS = ["close", "volume", "open", "high", "low"]
-code_name = 'aj네트웍스'
+code_name = '유한양행'
 until = '20200727'
 sql = """
     SELECT {} FROM `{}`
@@ -56,7 +56,7 @@ OPTIMIZER = "adam"
 BATCH_SIZE = 64
 
 # 학습 횟수
-EPOCHS = 10
+EPOCHS = 400
 
 try:
     # shuffle: split을 해주기 이전에 시퀀스를 섞을건지 여부

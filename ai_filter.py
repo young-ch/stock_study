@@ -153,7 +153,7 @@ def ai_filter(ai_filter_num, engine, until=datetime.datetime.today()):
         engine.execute(f"""
             DELETE FROM realtime_daily_buy_list WHERE code_name in ({','.join(map('"{}"'.format, filtered_list))})
         """)
-
+        print("삭제 됨")
 
 if __name__ == '__main__':
     # 모의투자, 실전투자 일때만 들어오는 함수

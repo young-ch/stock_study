@@ -20,47 +20,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd59e934-d5b3-41b8-90ee-beac12c36588" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/KIND_xls/chromedriver_win32/chromedriver.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bat/simul_run.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/info/test_20201007.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/jackbot.log.20200926" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/jackbot.log.20200928" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/jackbot.log.20200929" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/jackbot.log.20201001" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/jackbot.log.20201003" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/jackbot.log.20201005" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/jackbot.log.20201007" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/jackbot.log.20201011" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/jackbot.log.20201012" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/jackbot.log.20201013" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/jackbot.log.20201014" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/jackbot.log.20201015" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/jackbot.log.20201018" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/jackbot.log.20201019" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scheduler/simul_run.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simul_run.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simulator_v2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/untitled.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/untitled.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai_filter.py" beforeDir="false" afterPath="$PROJECT_DIR$/ai_filter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collector.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/collector_v2.py" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/OpenAPI_TEST.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grammer/13.dictionary.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/info/stock_info 테이블 만드는 방법.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/info/stock_info 테이블 활용 알고리즘.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/info/stock_info.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/info/테마 관련 함수 추가.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/trading_algorithms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/trading_algorithms.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/jackbot.log.20201026" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/jackbot.log.20201027" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/jackbot.log.20201028" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/jackbot.log.20201029" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/jackbot.log.20201030" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collector_v3.py" beforeDir="false" afterPath="$PROJECT_DIR$/collector_v3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kind_snapshots/b-candi.png" beforeDir="false" afterPath="$PROJECT_DIR$/kind_snapshots/b-candi.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kind_snapshots/b-dateinput.png" beforeDir="false" afterPath="$PROJECT_DIR$/kind_snapshots/b-dateinput.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kind_snapshots/before_click.png" beforeDir="false" afterPath="$PROJECT_DIR$/kind_snapshots/before_click.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kind_snapshots/before_search.png" beforeDir="false" afterPath="$PROJECT_DIR$/kind_snapshots/before_search.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kind_snapshots/dialog_block_wait_appear.png" beforeDir="false" afterPath="$PROJECT_DIR$/kind_snapshots/dialog_block_wait_appear.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kind_snapshots/dialog_block_wait_before.png" beforeDir="false" afterPath="$PROJECT_DIR$/kind_snapshots/dialog_block_wait_before.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kind_snapshots/dialog_block_wait_disappear.png" beforeDir="false" afterPath="$PROJECT_DIR$/kind_snapshots/dialog_block_wait_disappear.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/cf.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/cf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/collector_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/collector_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/open_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/open_api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library/simulator_func_mysql.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/simulator_func_mysql.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/jackbot.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/jackbot.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20200806" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20200807" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20200808" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20200809" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trader.py" beforeDir="false" afterPath="$PROJECT_DIR$/trader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trader_ori.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20200926" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20200928" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20200929" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20201001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20201003" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20201005" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20201007" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20201011" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20201012" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20201013" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20201014" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20201015" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20201018" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20201019" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +92,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\bot\grammer" />
       <recent name="E:\bot\library" />
       <recent name="E:\bot\sql_backup" />
     </key>
@@ -115,6 +111,48 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/grammer/12.multiprocessing.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="13.dictionary" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/grammer" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/grammer/13.dictionary.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="OpenAPI_TEST" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\godsk\anaconda3\envs\py37_32\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/OpenAPI_TEST.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -186,27 +224,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="kind_crawling" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="untitled" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/kind_crawling.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="naver_multi_crawler" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -220,27 +237,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/naver_multi_crawler.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="scraper" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="untitled" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scraper.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -341,18 +337,18 @@
       <item itemvalue="Python.simulator_func_mysql" />
       <item itemvalue="Python.trader" />
       <item itemvalue="Python.12.multiprocessing" />
-      <item itemvalue="Python.kind_crawling" />
       <item itemvalue="Python.naver_multi_crawler" />
-      <item itemvalue="Python.scraper" />
       <item itemvalue="Python.simul_run" />
+      <item itemvalue="Python.OpenAPI_TEST" />
+      <item itemvalue="Python.13.dictionary" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.13.dictionary" />
+        <item itemvalue="Python.OpenAPI_TEST" />
         <item itemvalue="Python.simul_run" />
         <item itemvalue="Python.naver_multi_crawler" />
         <item itemvalue="Python.12.multiprocessing" />
-        <item itemvalue="Python.kind_crawling" />
-        <item itemvalue="Python.scraper" />
       </list>
     </recent_temporary>
   </component>
@@ -386,90 +382,58 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600579198362">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603805965981">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600579198362" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603805965981" />
     <state x="739" y="294" key="FileChooserDialogImpl" timestamp="1595752847876">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="739" y="294" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1595752847876" />
-    <state x="289" y="414" width="145" height="429" key="GridCell.Tab.-1.bottom" timestamp="1595145528295">
+    <state width="1899" height="317" key="GridCell.Tab.0.bottom" timestamp="1604153334698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="289" y="414" width="145" height="429" key="GridCell.Tab.-1.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1595145528295" />
-    <state x="289" y="414" width="145" height="429" key="GridCell.Tab.-1.center" timestamp="1595145528294">
+    <state width="1899" height="317" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604153334698" />
+    <state width="1899" height="317" key="GridCell.Tab.0.center" timestamp="1604153334698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="289" y="414" width="145" height="429" key="GridCell.Tab.-1.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1595145528294" />
-    <state x="289" y="414" width="145" height="429" key="GridCell.Tab.-1.left" timestamp="1595145528294">
+    <state width="1899" height="317" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604153334698" />
+    <state width="1899" height="317" key="GridCell.Tab.0.left" timestamp="1604153334698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="289" y="414" width="145" height="429" key="GridCell.Tab.-1.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1595145528294" />
-    <state x="289" y="414" width="145" height="429" key="GridCell.Tab.-1.right" timestamp="1595145528295">
+    <state width="1899" height="317" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604153334698" />
+    <state width="1899" height="317" key="GridCell.Tab.0.right" timestamp="1604153334698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="289" y="414" width="145" height="429" key="GridCell.Tab.-1.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1595145528295" />
-    <state width="1899" height="335" key="GridCell.Tab.0.bottom" timestamp="1603190591380">
+    <state width="1899" height="317" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604153334698" />
+    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.bottom" timestamp="1604153052468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1594557750677" />
-    <state width="1899" height="335" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603190591380" />
-    <state width="1899" height="335" key="GridCell.Tab.0.center" timestamp="1603190591380">
+    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604153052468" />
+    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.center" timestamp="1604153052468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1594557750677" />
-    <state width="1899" height="335" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603190591380" />
-    <state width="1899" height="335" key="GridCell.Tab.0.left" timestamp="1603190591380">
+    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604153052468" />
+    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.left" timestamp="1604153052468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1594557750677" />
-    <state width="1899" height="335" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603190591380" />
-    <state width="1899" height="335" key="GridCell.Tab.0.right" timestamp="1603190591380">
+    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604153052468" />
+    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.right" timestamp="1604153052468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1594557750677" />
-    <state width="1899" height="335" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603190591380" />
-    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.bottom" timestamp="1603190591380">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="442" key="GridCell.Tab.1.bottom/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1594557644300" />
-    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603190591380" />
-    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.center" timestamp="1603190591380">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="442" key="GridCell.Tab.1.center/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1594557644300" />
-    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603190591380" />
-    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.left" timestamp="1603190591380">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="442" key="GridCell.Tab.1.left/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1594557644300" />
-    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603190591380" />
-    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.right" timestamp="1603190591380">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="442" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1594557644300" />
-    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603190591380" />
+    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604153052468" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1595846313878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1595846313878" />
-    <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1595144380213">
+    <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1604153036532">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="968" height="528" key="XDebugger.FullValuePopup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1595144380213" />
+    <state width="968" height="528" key="XDebugger.FullValuePopup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604153036532" />
     <state x="521" y="249" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1596633152051">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="521" y="249" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596633152051" />
-    <state x="863" y="250" width="830" height="523" key="dock-window-1" timestamp="1595147473920">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="863" y="250" width="830" height="523" key="dock-window-1/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1595147473920" />
-    <state x="289" y="414" width="161" height="496" key="dock-window-2" timestamp="1595147473920">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="289" y="414" width="161" height="496" key="dock-window-2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1595147473920" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1595396498549">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -510,8 +474,28 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/library/simulator_func_mysql.py</url>
-          <line>660</line>
+          <line>870</line>
           <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/library/simulator_func_mysql.py</url>
+          <line>877</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/library/simulator_func_mysql.py</url>
+          <line>952</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/library/simulator_func_mysql.py</url>
+          <line>1147</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/library/simulator_func_mysql.py</url>
+          <line>1148</line>
+          <option name="timeStamp" value="81" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

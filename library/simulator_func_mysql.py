@@ -11,6 +11,11 @@ from library import cf
 from pandas import DataFrame
 from sqlalchemy import event
 
+# 볼린저밴드 알고리즘을 위해 추가된 부분 1
+# simulator_func_mysql.py 파일 상단에 from pandas import DataFrame 아래에 추가해주세요
+from library.trading_algorithms import BBands
+
+
 class simulator_func_mysql:
     def __init__(self, simul_num, op, db_name):
         self.simul_num = int(simul_num)
@@ -113,16 +118,16 @@ class simulator_func_mysql:
         # 아래 부터는 알고리즘 별로 별도의 설정을 해주는 부분
         if self.simul_num == 1:
             # 시뮬레이팅 시작 일자
-            self.simul_start_date = "20200101"
+            self.simul_start_date = "20190701"
 
             self.use_min = True
             # 아침 9시에만 매수를 하고 싶은 경우 True, 9시가 아니어도 매수를 하고 싶은 경우 False(분별 시뮬레이션, trader 적용 가능 / 일별 시뮬레이션은 9시에만 매수, 매도)
             self.only_nine_buy = False
             # 실시간 조건 매수 옵션 (고급 챕터에서 소개) self.only_nine_buy 옵션을 반드시 False로 설정해야함, self.use_min이 반드시 True로 설정되어야함
-            self.trade_check_num = 1  # 실시간 조건 매수 알고리즘 선택 (1,2,3..)
+            self.trade_check_num = 2  # 실시간 조건 매수 알고리즘 선택 (1,2,3..)
 
 
-            self.db_to_realtime_daily_buy_list_num = 2
+            self.db_to_realtime_daily_buy_list_num = 3
 
             self.start_invest_price = 30000000
 
@@ -134,8 +139,22 @@ class simulator_func_mysql:
             # 자산 중 최소로 남겨 둘 금액
             self.limit_money = 10000
 
+            self.total_transaction_price = 100000000
+
+            # 전날보다 상승률 이상
+            self.d1_diff = 5
+            # 전날보다 상승률 이하
+            self.diff_down = 8
+            # 테마 코드 시작
+            self.thema_code_start = 130
+            # 테마 코드 끝
+            self.thema_code_end = 599
             # # 익절 수익률 기준치
             self.sell_point = 20
+
+            self.vol_mul = 1.5
+
+            self.interval_month = 1
 
             self.losscut_point = -3
             # 실전/모의 봇 돌릴 때 매수하는 순간 종목의 최신 종가 보다 1% 이상 오른 경우 사지 않도록 하는 설정(변경 가능)
@@ -154,30 +173,41 @@ class simulator_func_mysql:
             # n일 전 종가 대비 현재 종가(현재가)가 몇 프로 증가 했을 때 매수, 몇 프로 떨어졌을 때 매도 할 지 설정(0으로 설정 시 단순히 증가 했을 때 매수, 감소 했을 때 매도)
             self.diff_point = 1  # 단위 %
 
+            # START #############################################################################################################
+            # 볼린저밴드 알고리즘을 위해 추가된 부분 2 (알고리즘 번호 설정)
+            # **self.simul_num** if 조건문 제일 아래에 추가해주세요
+            # ~!
         elif self.simul_num == 2:
             # 시뮬레이팅 시작 일자
             self.simul_start_date = "20190101"
 
             ######### 알고리즘 선택 #############
             # 매수 리스트 설정 알고리즘 번호
-            self.db_to_realtime_daily_buy_list_num = 2
-            # 매도 리스트 설정 알고리즘 번호)
-            self.sell_list_num = 2
+            self.db_to_realtime_daily_buy_list_num = 12
+            # 매도 리스트 설정 알고리즘 번호
+            self.sell_list_num = 7
             ###################################
-            # 초기 투자자금
-            self.start_invest_price = 5000000
-            # 매수 금액
-            self.invest_unit = 500000
-            # 자산 중 최소로 남겨 둘 금액
-            self.limit_money = 10000
-            # # 익절 수익률 기준치
+
+            # 익절 수익률 기준치
             self.sell_point = 10
+
             # 손절 수익률 기준치
             self.losscut_point = -2
+
+            # 초기 투자자금
+            self.start_invest_price = 10000000
+
+            # 매수 금액
+            self.invest_unit = 1000000
+
+            # 자산 중 최소로 남겨 둘 금액
+            self.limit_money = 1000000
+
             # 실전/모의 봇 돌릴 때 매수하는 순간 종목의 최신 종가 보다 1% 이상 오른 경우 사지 않도록 하는 설정(변경 가능)
             self.invest_limit_rate = 1.01
             # 실전/모의 봇 돌릴 때 매수하는 순간 종목의 최신 종가 보다 -2% 이하로 떨어진 경우 사지 않도록 하는 설정(변경 가능)
             self.invest_min_limit_rate = 0.98
+        # END ################################################################################################################
 
         elif self.simul_num == 3:
             # 시뮬레이팅 시작 일자
@@ -203,8 +233,8 @@ class simulator_func_mysql:
             self.start_invest_price = 5000000
 
 
-            self.use_ai = True  # ai 알고리즘 사용 시 True 사용 안하면 False
-            self.ai_filter_num = 1  # ai 알고리즘 선택
+           # self.use_ai = True  # ai 알고리즘 사용 시 True 사용 안하면 False
+           # self.ai_filter_num = 1  # ai 알고리즘 선택
 
             # 거래량
             self.total_transaction_price = 10000000
@@ -430,20 +460,76 @@ class simulator_func_mysql:
                 # 매수 시작 시간
                 #self.buy_start_time = QTime(9, 30, 0)
                 # 거래대금
-                self.total_tr_price = 10000000
+                self.total_tr_price = 1000000
 
                 self.sell_list_num = 1
 
                 # # 익절 수익률 기준치
-                self.sell_point = 15
+                self.sell_point = 10
 
                 self.losscut_point = -3
 
                 # 매수 금액
-                self.invest_unit = 3000000
+                self.invest_unit = 2000000
 
-                self.use_realtime_crawl = True
-                self.buy_start_time = QTime(9, 10, 0)
+                self.buy_start_time = QTime(9, 00, 0)
+
+        elif self.simul_num == 16:
+            # 시뮬레이팅 시작 일자
+            self.simul_start_date = "20190701"
+
+            self.use_min = False
+            # 아침 9시에만 매수를 하고 싶은 경우 True, 9시가 아니어도 매수를 하고 싶은 경우 False(분별 시뮬레이션, trader 적용 가능 / 일별 시뮬레이션은 9시에만 매수, 매도)
+            self.only_nine_buy = False
+            # 실시간 조건 매수 옵션 (고급 챕터에서 소개) self.only_nine_buy 옵션을 반드시 False로 설정해야함, self.use_min이 반드시 True로 설정되어야함
+            # self.trade_check_num = 2  # 실시간 조건 매수 알고리즘 선택 (1,2,3..)
+
+            self.db_to_realtime_daily_buy_list_num = 3
+
+            self.start_invest_price = 30000000
+
+            self.total_tr_price = 10000000
+
+            # 매수 금액
+            self.invest_unit = 2000000
+
+            # 자산 중 최소로 남겨 둘 금액
+            self.limit_money = 10000
+
+            self.total_transaction_price = 100000000
+
+            # 전날보다 상승률 이상
+            self.d1_diff = 5
+            # 전날보다 상승률 이하
+            self.diff_down = 8
+            # 테마 코드 시작
+            self.thema_code_start = 130
+            # 테마 코드 끝
+            self.thema_code_end = 599
+            # # 익절 수익률 기준치
+            self.sell_point = 20
+
+            self.vol_mul = 1.5
+
+            self.interval_month = 1
+
+            self.losscut_point = -3
+            # 실전/모의 봇 돌릴 때 매수하는 순간 종목의 최신 종가 보다 1% 이상 오른 경우 사지 않도록 하는 설정(변경 가능)
+            self.invest_limit_rate = 1.01
+            # 실전/모의 봇 돌릴 때 매수하는 순간 종목의 최신 종가 보다 -2% 이하로 떨어진 경우 사지 않도록 하는 설정(변경 가능)
+            self.invest_min_limit_rate = 0.98
+
+            # self.trade_check_num = 1  # 실시간 조건 매수 알고리즘 선택 (1,2,3..)
+            # 특정 거래대금 보다 x배 이상 증가 할 경우 매수
+            self.volume_up = 2
+
+            # 매도 리스트 설정 알고리즘 번호(절대모멘텀 code ver)
+            self.sell_list_num = 2
+            # n일 전 종가 데이터를 가져올지 설정 (ex. 20 -> 장이 열리는 날 기준 20일 이니까 기간으로 보면 약 한 달, 250일->1년)
+            self.day_before = 100  # 단위 일
+            # n일 전 종가 대비 현재 종가(현재가)가 몇 프로 증가 했을 때 매수, 몇 프로 떨어졌을 때 매도 할 지 설정(0으로 설정 시 단순히 증가 했을 때 매수, 감소 했을 때 매도)
+            self.diff_point = 1  # 단위 %
+
 
         #########################################################################################################################
         self.db_name_setting()
@@ -504,6 +590,29 @@ class simulator_func_mysql:
                 print("초반에 reset 으로 돌다가 멈춰버린 경우 다시 init 해줘야함 ! ")
                 self.init_database()
                 self.simul_reset = True
+
+    #Stochastic 구현
+    def get_stochastic_fast_k(self, code_name):
+
+        date_rows_yesterday = self.date_rows_yesterday
+        print("-----------------------" + date_rows_yesterday + "----------------------------")
+        n_day = date_rows_yesterday - self.stoc_day
+
+        sql = f"select close from daily_buy_list.`{date_rows_yesterday}` where code_name = '{code_name}'"
+        yesterday_close = self.engine_daily_buy_list.execute(sql).fetchall()[0][0]
+
+
+        sql = "select code_name, MAX(high), MIN(low) from daily_craw.`" + code_name + "` where date BETWEEN " + date_rows_yesterday + "AND"+ n_day
+
+        yesterday_stoc = self.engine_daily_craw.execute(sql).fetchall()
+        db_code_name = yesterday_stoc[0][0]
+
+        Min_price = yesterday_stoc[0][2]
+        MAX_price = yesterday_stoc[0][1]
+
+        fast_k = ((yesterday_close - Min_price) / (MAX_price - Min_price)) * 100
+
+        return fast_k
 
     # 데이터베이스 초기화 함수
     def init_database(self):
@@ -757,6 +866,7 @@ class simulator_func_mysql:
         yes_high = df_row['high']
         yes_low = df_row['low']
         yes_volume = df_row['volume']
+
         # 실시간 거래 대금 체크 알고리즘
         if self.trade_check_num == 1:
             # 어제 거래 대금
@@ -768,6 +878,7 @@ class simulator_func_mysql:
                 return True
             else:
                 return False
+
 
         elif self.trade_check_num == 2:
             # 매수 가격 최저 범위
@@ -794,6 +905,8 @@ class simulator_func_mysql:
             logger.debug("trade_check 함수에 self.trade_check_num = {} 에 맞는 알고리즘이 없습니다. ".format(self.trade_check_num))
             exit(1)
 
+
+
     # 여기서 sql문의 date는 반드시 어제 일자여야 한다. -> 어제 일자 기준 반영된 데이터로 종목을 선정해야함.
     ##!@####################################################################################################################################################################################
     # 매수 할 종목의 리스트를 선정 알고리즘
@@ -811,24 +924,34 @@ class simulator_func_mysql:
         # 5 / 40 골든크로스 buy
         elif self.db_to_realtime_daily_buy_list_num == 2:
             # orderby는 거래량 많은 순서
-            sql = "select * from `" + date_rows_yesterday + "` a where yes_clo40 > yes_clo5 and clo5 > clo40 " \
-                                                            "and NOT exists (select null from stock_konex b where a.code=b.code) " \
-                                                            "and close < '%s' group by code"
+            sql = "select * from `" + date_rows_yesterday + "` YES_DAILY , stock_info Stock " \
+                            "where YES_DAILY.code = Stock.code " \
+                            "and yes_clo40 > yes_clo5 and clo5 > clo40 " \
+                            "and NOT exists (select null from stock_konex b where YES_DAILY.code=b.code) " \
+                            "AND Stock.thema_code IS NOT NULL " \
+                            "and close < '%s' group by code"
             realtime_daily_buy_list = self.engine_daily_buy_list.execute(sql % (self.invest_unit)).fetchall()
 
 
 
         elif self.db_to_realtime_daily_buy_list_num == 3:
-            sql = "select * from `" + date_rows_yesterday + "` a where yes_clo20 > yes_clo5 and clo5 > clo20 " \
-                            "and NOT exists(select null from stock_konex b where a.code = b.code) " \
-                            "and NOT exists(select null from stock_managing c where a.code = c.code and c.code_name != '' group by c.code)" \
-                            "and NOT exists(select null from stock_insincerity d where a.code = d.code and d.code_name != '' group by d.code)" \
-                            "and NOT exists(select null from stock_invest_caution e where a.code = e.code and DATE_SUB('%s', INTERVAL '%s' MONTH ) < e.post_date and e.post_date < DATE('%s') and e.type != '투자경고 지정해제' group by e.code)" \
-                            "and NOT exists(select null from stock_invest_warning f where a.code = f.code and f.post_date <= DATE('%s') and (f.cleared_date > DATE('%s') or f.cleared_date is null) group by f.code)" \
-                            "and NOT exists(select null from stock_invest_danger g where a.code = g.code and g.post_date <= DATE('%s') and (g.cleared_date > DATE('%s') or g.cleared_date is null) group by g.code)" \
 
+            sql = f'''
+                    select YES_DAILY.* from `{date_rows_yesterday}` YES_DAILY , stock_info Stock 
+                            where YES_DAILY.code = Stock.code 
+                            and yes_clo20 > yes_clo5 and clo5 > clo20 
+                            AND YES_DAILY.close * YES_DAILY.volume > {self.total_transaction_price} 
+                            AND YES_DAILY.clo5_diff_rate >= {self.volume_up} 
+                            And Stock.thema_code between {self.thema_code_start} and {self.thema_code_end} 
+                            AND Stock.thema_code IS NOT NULL 
+                            and NOT exists(select null from stock_konex b where YES_DAILY.code = b.code) 
+                            and NOT exists(select null from stock_managing c where YES_DAILY.code = c.code and c.code_name != '' group by c.code) 
+                            and NOT exists(select null from stock_insincerity d where YES_DAILY.code = d.code and d.code_name != '' group by d.code) 
+                            and Stock.remarks NOT like "%관리종목%" 
+                            and Stock.remarks NOT like "%거래정지%"
+                  '''
+            realtime_daily_buy_list = self.engine_daily_buy_list.execute(sql).fetchall()
 
-            realtime_daily_buy_list = self.engine_daily_buy_list.execute(sql % (date_rows_yesterday, self.interval_month, date_rows_yesterday, date_rows_yesterday, date_rows_yesterday, date_rows_yesterday, date_rows_yesterday)).fetchall()
 
         # 거래량이 급증한 경우 매수 하는 알고리즘  (상승장 컨셉)
         elif self.db_to_realtime_daily_buy_list_num == 4:
@@ -836,14 +959,11 @@ class simulator_func_mysql:
             sql = "select * from `" + date_rows_yesterday + "` a where yes_clo20 > yes_clo5 and clo5 > clo20 and volume * close >= '%s' " \
                                                         "and vol20 * '%s' < volume and d1_diff_rate > '%s' " \
                                                         "and NOT exists(select null from stock_konex b where a.code = b.code) " \
-                                                        "and NOT exists(select null from stock_managing c where a.code = c.code and c.code_name != '' group by c.code)" \
-                                                        "and NOT exists(select null from stock_insincerity d where a.code = d.code and d.code_name != '' group by d.code)" \
-                                                        "and NOT exists(select null from stock_invest_caution e where a.code = e.code and DATE_SUB('%s', INTERVAL '%s' MONTH ) < e.post_date and e.post_date < DATE('%s') and e.type != '투자경고 지정해제' group by e.code)" \
-                                                        "and NOT exists(select null from stock_invest_warning f where a.code = f.code and f.post_date <= DATE('%s') and (f.cleared_date > DATE('%s') or f.cleared_date is null) group by f.code)" \
-                                                        "and NOT exists(select null from stock_invest_danger g where a.code = g.code and g.post_date <= DATE('%s') and (g.cleared_date > DATE('%s') or g.cleared_date is null) group by g.code)" \
                                                         "order by volume * close desc"
 
-            realtime_daily_buy_list = self.engine_daily_buy_list.execute(sql % (self.total_transaction_price, self.vol_mul , self.d1_diff ,date_rows_yesterday, self.interval_month, date_rows_yesterday, date_rows_yesterday, date_rows_yesterday, date_rows_yesterday, date_rows_yesterday)).fetchall()
+
+            realtime_daily_buy_list = self.engine_daily_buy_list.execute(sql % (date_rows_yesterday, self.total_transaction_price , self.vol_mul , self.d1_diff)).fetchall()
+
 
         # 매수함수
         # # 절대 모멘텀 전략 : 특정일 전의 종가 보다 n% 이상 상승한 종목 매수 (code version)
@@ -891,7 +1011,7 @@ class simulator_func_mysql:
                         "AND NOT exists (SELECT null FROM stock_konex b WHERE YES_DAY.code=b.code)" \
                         "AND YES_DAY.close < '%s'"
 
-                realtime_daily_buy_list = self.engine_daily_buy_list.execute(sql % (self.diff_point, self.invest_unit)).fetchall()
+                realtime_daily_buy_list = self.engine_daily_buy_list.execute(sql % (self.diff_point, self.invest_unit)).ĺplfetchall()
 
         # 상대 모멘텀 전략 : 특정일 전의 종가 보다 n% 이상 상승한 종목 중 가장 많이 상승한 종목 순으로 매수 (내림차순) (query version)
         elif self.db_to_realtime_daily_buy_list_num == 9:
@@ -923,11 +1043,18 @@ class simulator_func_mysql:
             naver_multi_crawler.run_crawl(today_min_date)
             # daily_buy_list DB에서 가장 최근 날짜(매수하는 날 기준 어제 날짜가 Return)
             sql = "SELECT YES_DAILY.* " \
-                  f"FROM `{date_rows_yesterday}` YES_DAILY ,naver_min_crawl NAVER " \
+                  f"FROM `{date_rows_yesterday}` YES_DAILY ,naver_min_crawl NAVER ,stock_info Stock " \
                   "WHERE YES_DAILY.code = NAVER.code " \
+                  "AND NAVER.code = Stock.code " \
                   f"AND NAVER.date = '{today_min_date}' " \
                   f"AND NAVER.close * NAVER.volume > {self.total_tr_price} " \
-                  "AND (NAVER.close-YES_DAILY.close)/YES_DAILY.close*100 < 20 " \
+                  f"AND (NAVER.close-YES_DAILY.close)/YES_DAILY.close*100 < 10 " \
+                  f"AND YES_DAILY.clo5_diff_rate >= 5 " \
+                  f"AND YES_DAILY.clo5_diff_rate < 8 " \
+                  f"AND YES_DAILY.clo5 > YES_DAILY.clo10 " \
+                  "AND YES_DAILY.clo20 < YES_DAILY.close " \
+                  "AND Stock.thema_code IS NOT NULL " \
+                  "AND Stock.thema_code between 130 and 599 " \
                   "AND (exists (SELECT null FROM stock_kospi KOSPI WHERE YES_DAILY.code=KOSPI.code) " \
                   "OR exists (SELECT null FROM stock_kosdaq KOSDAQ WHERE YES_DAILY.code=KOSDAQ.code)) " \
                   "ORDER BY (NAVER.close-YES_DAILY.close)/YES_DAILY.close*100 DESC " \
@@ -971,6 +1098,56 @@ class simulator_func_mysql:
                         # 모멘텀(수익률)이 self.diff_point 보다 높을 경우 realtime_daily_buy_list에 append
                         if diff_point_calc > self.diff_point:
                             realtime_daily_buy_list.append(row)
+
+                # START ##############################################################################################################
+                # 볼린저밴드 알고리즘을 위해 추가된 부분 3 (매수 리스트 알고리즘)
+                # 마지막 **db_to_realtime_daily_buy_list_num** if 조건문 제일 아래에 추가해주시기 바랍니다.
+                # ~!!
+        elif self.db_to_realtime_daily_buy_list_num == 12:
+            # 20일 이동평균선과 승수 2 사용
+            realtime_daily_buy_list = []
+            # 사용하는 이동평균선 기간
+            ma_period = 20
+
+            if i > ma_period:
+                '''
+                아래 쿼리에 'ORDER BY volume * close DESC limit 100' 조건은 전종목 (2000여개)을 검색할 경우 시뮬레이션 하루당 80여초가량 소모되어 (P.S. 컴퓨터 사양마다 상이할 수 있습니다.) 
+                거래대금으로 나열한 뒤 100개의 종목들만 가져오도록 제한하였습니다.
+                차후 실제로 알고리즘을 구현하실 때에는 보조지표 중의 하나인 볼린저밴드를 이용하시기 전에 충분한 조건들을 추가하여 종목 수를 제한하는 것을 추천드립니다. 
+                (예시. 이평선, 거래량 사용)
+                '''
+                sql = f"""
+                               SELECT *
+                               FROM `{date_rows_yesterday}` a
+                               WHERE NOT exists(SELECT null FROM stock_konex b WHERE a.code = b.code)
+                                   AND  volume != 0 
+                                   AND close < '{self.invest_unit}'
+                                   ORDER BY volume * close DESC limit 100
+                           """
+                realtime_daily_buy_list_temp = self.engine_daily_buy_list.execute(sql).fetchall()
+
+                # 과매도 포지션 포착
+                for item in realtime_daily_buy_list_temp:
+                    code_name = item.code_name
+                    # 위의 조건을 충족하는 종목의 종가 데이터들을 가져오는 쿼리
+                    bb_sql = f"""
+                                   SELECT close
+                                   FROM `{code_name}`
+                                   WHERE date <= '{date_rows_yesterday}'
+                                   ORDER BY date DESC limit {ma_period}
+                               """
+                    df_close = self.engine_daily_craw.execute(bb_sql).fetchall()
+
+                    if len(df_close) >= ma_period:
+                        # 데이터프레임으로 종가리스트를 담아서 trading_algorithms.py 파일에 존재하는 BBands 함수에 보내주는 코드
+                        result = BBands(pd.DataFrame(df_close), w=ma_period)
+                        # result가 false가 아닐 경우 볼린저밴드의 수치를 가지고 알고리즘을 구현
+                        if result:
+                            mbb, ubb, lbb, perb, bw = result
+                            # perb가 음수인 경우: 종가가 볼린저밴드 하한선보다 아래에 위치 할 경우 매수리스트에 넣는다
+                            if perb < 0:
+                                realtime_daily_buy_list.append(item)
+        # END ################################################################################################################
 
         ######################################################################################################################################################################################
 
@@ -1041,6 +1218,7 @@ class simulator_func_mysql:
         # len_df_realtime_daily_buy_list에 다가 0을 넣는다.
         else:
             self.len_df_realtime_daily_buy_list = 0
+
 
     # 현재의 주가를 all_item_db에 있는 보유한 종목들에 대해서 반영 한다.
     def db_to_all_item_present_price_update(self, code_name, open, clo5, clo10, clo20, clo40, clo60, clo80, clo100,
@@ -1498,6 +1676,50 @@ class simulator_func_mysql:
                 "OR ALLDB.rate <= '%s')"
            sell_list = self.engine_simulator.execute(sql % (self.diff_point * (-1), self.losscut_point)).fetchall()
 
+           # START ##############################################################################################################
+           # 볼린저밴드 알고리즘을 위해 추가된 부분 4 (매도 리스트 설정 알고리즘)
+           # 마지막 sell_list_num 확인 조건문 아래에 아래에 추가해주시기 바랍니다.
+           # ~!!!
+        elif self.sell_list_num == 7:
+           sell_list = []
+           # 사용하는 이동평균선 기간
+           ma_period = 20
+
+           if i > ma_period:
+               # all_item_db 에서 매도하지 않고 보유하고 있는 종목 가져오는 쿼리
+               sql = """
+                              SELECT code, rate, present_price,valuation_profit, code_name
+                              FROM all_item_db
+                              WHERE (sell_date = '0')
+                              group by code
+                          """
+               sell_list_temp = self.engine_simulator.execute(sql).fetchall()
+
+               # 과매수 포지션 포착
+               for item in sell_list_temp:
+                   code_name = item.code_name
+                   date_rows_yesterday = self.date_rows[i - 1][0]
+                   # 보유 중인 종목의 종가 데이터를 가져오는 쿼리
+                   bb_sql = f"""
+                                  SELECT close
+                                  FROM `{code_name}`
+                                  WHERE date <= '{date_rows_yesterday}'
+                                  ORDER BY date DESC limit {ma_period}
+                              """
+                   df_close = self.engine_daily_craw.execute(bb_sql).fetchall()
+
+                   if len(df_close) >= ma_period:
+                       # 데이터프레임으로 종가리스트를 담아서 trading_algorithms.py 파일에 존재하는 BBands 함수에 보내주는 코드
+                       result = BBands(pd.DataFrame(df_close), w=ma_period)
+                       # result가 false가 아닐 경우 볼린저밴드의 수치를 가지고 알고리즘을 구현
+                       if result:
+                           mbb, ubb, lbb, perb, bw = result
+                           # perb가 1보다 큰 경우: 종가가 볼린저밴드 상한선 위에 위치 할 경우 매도리스트에 넣는다
+                           if perb > 1:
+                               sell_list.append(item)
+
+        # END ################################################################################################################
+
         ##################################################################################################################################################################################################################
         else:
             print("self.sell_list_num 설정이 비었다!!!!")
@@ -1936,3 +2158,4 @@ class simulator_func_mysql:
             # 일별 시뮬레이팅
             else:
                 self.simul_by_date(date_rows_today, date_rows_yesterday, i)
+

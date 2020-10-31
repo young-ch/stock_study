@@ -39,6 +39,7 @@ class collector():
     def collecting(self):
         self.collector_api.code_update_check()#DB가 생성되고 만들어진다.
 
+
 #  __name__ ? => 현재 모듈의 이름을 담고 있는 내장 변수, 우리는 colector라는 파일을 실행한다! -> 이 파일의 이름은 __main__ 이 된다.
 # import openapi를 통해서 openapi소스코드를 참고를 하는 경우 openapi파일의 __name__은 "openapi"로 찍힌다.
 # openapi 파일을 실행하면 그때는 참고 한 것이 아니기 때문에 __name__은 __main__ 이 된다.

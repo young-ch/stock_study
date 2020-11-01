@@ -20,42 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd59e934-d5b3-41b8-90ee-beac12c36588" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/OpenAPI_TEST.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grammer/13.dictionary.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/info/stock_info 테이블 만드는 방법.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/info/stock_info 테이블 활용 알고리즘.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/info/stock_info.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/info/테마 관련 함수 추가.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/trading_algorithms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/trading_algorithms.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/jackbot.log.20201026" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/jackbot.log.20201027" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/jackbot.log.20201028" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/jackbot.log.20201029" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/jackbot.log.20201030" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collector_v3.py" beforeDir="false" afterPath="$PROJECT_DIR$/collector_v3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kind_snapshots/b-candi.png" beforeDir="false" afterPath="$PROJECT_DIR$/kind_snapshots/b-candi.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kind_snapshots/dialog_block_wait_appear.png" beforeDir="false" afterPath="$PROJECT_DIR$/kind_snapshots/dialog_block_wait_appear.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kind_snapshots/dialog_block_wait_before.png" beforeDir="false" afterPath="$PROJECT_DIR$/kind_snapshots/dialog_block_wait_before.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/collector_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/collector_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/open_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/open_api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library/simulator_func_mysql.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/simulator_func_mysql.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/jackbot.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/jackbot.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20200926" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20200928" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20200929" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20201001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20201003" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20201005" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20201007" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20201011" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20201012" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20201013" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20201014" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20201015" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20201018" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20201019" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20201026" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20201027" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20201028" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +68,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.simulator">
-    <configuration name="12.multiprocessing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="11.map, partial" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -110,7 +80,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/grammer/12.multiprocessing.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/grammer/11.map, partial.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -336,19 +306,19 @@
       <item itemvalue="Python.simulator" />
       <item itemvalue="Python.simulator_func_mysql" />
       <item itemvalue="Python.trader" />
-      <item itemvalue="Python.12.multiprocessing" />
       <item itemvalue="Python.naver_multi_crawler" />
       <item itemvalue="Python.simul_run" />
       <item itemvalue="Python.OpenAPI_TEST" />
       <item itemvalue="Python.13.dictionary" />
+      <item itemvalue="Python.11.map, partial" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.11.map, partial" />
         <item itemvalue="Python.13.dictionary" />
         <item itemvalue="Python.OpenAPI_TEST" />
         <item itemvalue="Python.simul_run" />
         <item itemvalue="Python.naver_multi_crawler" />
-        <item itemvalue="Python.12.multiprocessing" />
       </list>
     </recent_temporary>
   </component>
@@ -390,38 +360,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="739" y="294" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1595752847876" />
-    <state width="1899" height="317" key="GridCell.Tab.0.bottom" timestamp="1604153334698">
+    <state width="1899" height="335" key="GridCell.Tab.0.bottom" timestamp="1604190484769">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="317" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604153334698" />
-    <state width="1899" height="317" key="GridCell.Tab.0.center" timestamp="1604153334698">
+    <state width="1899" height="335" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604190484769" />
+    <state width="1899" height="335" key="GridCell.Tab.0.center" timestamp="1604190484769">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="317" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604153334698" />
-    <state width="1899" height="317" key="GridCell.Tab.0.left" timestamp="1604153334698">
+    <state width="1899" height="335" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604190484769" />
+    <state width="1899" height="335" key="GridCell.Tab.0.left" timestamp="1604190484769">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="317" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604153334698" />
-    <state width="1899" height="317" key="GridCell.Tab.0.right" timestamp="1604153334698">
+    <state width="1899" height="335" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604190484769" />
+    <state width="1899" height="335" key="GridCell.Tab.0.right" timestamp="1604190484769">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="317" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604153334698" />
-    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.bottom" timestamp="1604153052468">
+    <state width="1899" height="335" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604190484769" />
+    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.bottom" timestamp="1604190508437">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604153052468" />
-    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.center" timestamp="1604153052468">
+    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604190508437" />
+    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.center" timestamp="1604190508437">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604153052468" />
-    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.left" timestamp="1604153052468">
+    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604190508437" />
+    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.left" timestamp="1604190508437">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604153052468" />
-    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.right" timestamp="1604153052468">
+    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604190508437" />
+    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.right" timestamp="1604190508437">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604153052468" />
+    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604190508437" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1595846313878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -474,28 +444,38 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/library/simulator_func_mysql.py</url>
-          <line>870</line>
+          <line>876</line>
           <option name="timeStamp" value="68" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/library/simulator_func_mysql.py</url>
-          <line>877</line>
+          <line>883</line>
           <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/library/simulator_func_mysql.py</url>
-          <line>952</line>
-          <option name="timeStamp" value="71" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/library/simulator_func_mysql.py</url>
-          <line>1147</line>
+          <line>1154</line>
           <option name="timeStamp" value="80" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/library/simulator_func_mysql.py</url>
-          <line>1148</line>
+          <line>1155</line>
           <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/library/simulator_func_mysql.py</url>
+          <line>1675</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/library/simulator_func_mysql.py</url>
+          <line>1655</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/library/simulator_func_mysql.py</url>
+          <line>1664</line>
+          <option name="timeStamp" value="87" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

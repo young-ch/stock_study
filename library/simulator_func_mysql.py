@@ -142,7 +142,7 @@ class simulator_func_mysql:
             self.total_transaction_price = 100000000
 
             # 전날보다 상승률 이상
-            self.d1_diff = 5
+            self.diff_up = 5
             # 전날보다 상승률 이하
             self.diff_down = 8
             # 테마 코드 시작
@@ -150,7 +150,7 @@ class simulator_func_mysql:
             # 테마 코드 끝
             self.thema_code_end = 599
             # # 익절 수익률 기준치
-            self.sell_point = 20
+            self.sell_point = 150
 
             self.vol_mul = 1.5
 
@@ -457,10 +457,12 @@ class simulator_func_mysql:
                 self.use_realtime_crawl = True
                 # naver crawling 매수 알고리즘
                 self.db_to_realtime_daily_buy_list_num = 10
+
+
                 # 매수 시작 시간
                 #self.buy_start_time = QTime(9, 30, 0)
                 # 거래대금
-                self.total_tr_price = 1000000
+                self.total_tr_price = 10000000
 
                 self.sell_list_num = 1
 
@@ -468,6 +470,10 @@ class simulator_func_mysql:
                 self.sell_point = 10
 
                 self.losscut_point = -3
+
+                self.diff_up = 5
+                # 전날보다 상승률 이하
+                self.diff_down = 8
 
                 # 매수 금액
                 self.invest_unit = 2000000
@@ -941,14 +947,15 @@ class simulator_func_mysql:
                             where YES_DAILY.code = Stock.code 
                             and yes_clo20 > yes_clo5 and clo5 > clo20 
                             AND YES_DAILY.close * YES_DAILY.volume > {self.total_transaction_price} 
-                            AND YES_DAILY.clo5_diff_rate >= {self.volume_up} 
+                            AND YES_DAILY.clo5_diff_rate >= {self.diff_up} 
+                            AND YES_DAILY.clo5_diff_rate < {self.diff_down}
                             And Stock.thema_code between {self.thema_code_start} and {self.thema_code_end} 
                             AND Stock.thema_code IS NOT NULL 
                             and NOT exists(select null from stock_konex b where YES_DAILY.code = b.code) 
                             and NOT exists(select null from stock_managing c where YES_DAILY.code = c.code and c.code_name != '' group by c.code) 
                             and NOT exists(select null from stock_insincerity d where YES_DAILY.code = d.code and d.code_name != '' group by d.code) 
-                            and Stock.remarks NOT like "%관리종목%" 
-                            and Stock.remarks NOT like "%거래정지%"
+                            and Stock.remarks NOT like '%관리종목%' 
+                            and Stock.remarks NOT like '%거래정지%'
                   '''
             realtime_daily_buy_list = self.engine_daily_buy_list.execute(sql).fetchall()
 
@@ -1042,24 +1049,24 @@ class simulator_func_mysql:
             today_min_date = datetime.datetime.today().strftime("%Y%m%d%H%M")
             naver_multi_crawler.run_crawl(today_min_date)
             # daily_buy_list DB에서 가장 최근 날짜(매수하는 날 기준 어제 날짜가 Return)
-            sql = "SELECT YES_DAILY.* " \
-                  f"FROM `{date_rows_yesterday}` YES_DAILY ,naver_min_crawl NAVER ,stock_info Stock " \
-                  "WHERE YES_DAILY.code = NAVER.code " \
-                  "AND NAVER.code = Stock.code " \
-                  f"AND NAVER.date = '{today_min_date}' " \
-                  f"AND NAVER.close * NAVER.volume > {self.total_tr_price} " \
-                  f"AND (NAVER.close-YES_DAILY.close)/YES_DAILY.close*100 < 10 " \
-                  f"AND YES_DAILY.clo5_diff_rate >= 5 " \
-                  f"AND YES_DAILY.clo5_diff_rate < 8 " \
-                  f"AND YES_DAILY.clo5 > YES_DAILY.clo10 " \
-                  "AND YES_DAILY.clo20 < YES_DAILY.close " \
-                  "AND Stock.thema_code IS NOT NULL " \
-                  "AND Stock.thema_code between 130 and 599 " \
-                  "AND (exists (SELECT null FROM stock_kospi KOSPI WHERE YES_DAILY.code=KOSPI.code) " \
-                  "OR exists (SELECT null FROM stock_kosdaq KOSDAQ WHERE YES_DAILY.code=KOSDAQ.code)) " \
-                  "ORDER BY (NAVER.close-YES_DAILY.close)/YES_DAILY.close*100 DESC " \
-                  "LIMIT 5"
-
+            sql = f'''
+                      SELECT YES_DAILY.* 
+                      FROM `{date_rows_yesterday}` YES_DAILY ,naver_min_crawl NAVER ,stock_info Stock 
+                      WHERE YES_DAILY.code = NAVER.code 
+                      AND NAVER.code = Stock.code 
+                      AND NAVER.close * NAVER.volume > {self.total_tr_price} 
+                      AND (NAVER.close-YES_DAILY.close)/YES_DAILY.close*100 < 10 
+                      AND YES_DAILY.clo5_diff_rate >= {self.diff_up} 
+                      AND YES_DAILY.clo5_diff_rate < {self.diff_down} 
+                      AND YES_DAILY.clo5 > YES_DAILY.clo10 
+                      AND YES_DAILY.clo20 < YES_DAILY.close 
+                      AND Stock.thema_code IS NOT NULL 
+                      AND Stock.thema_code between {self.thema_code_start}  and {self.thema_code_end}
+                      AND (exists (SELECT null FROM stock_kospi KOSPI WHERE YES_DAILY.code=KOSPI.code) 
+                      OR exists (SELECT null FROM stock_kosdaq KOSDAQ WHERE YES_DAILY.code=KOSDAQ.code)) 
+                      ORDER BY (NAVER.close-YES_DAILY.close)/YES_DAILY.close*100 DESC 
+                      LIMIT 5"
+                 '''
             # 아래 명령을 통해 테이블로 부터 데이터를 가져오면 리스트 형태로 realtime_daily_buy_list 에 담긴다.
             realtime_daily_buy_list = self.engine_daily_buy_list.execute(sql).fetchall()
 
@@ -1633,9 +1640,40 @@ class simulator_func_mysql:
 
         # 5 / 20 이동 평균선 데드크로스 이거나, losscut_point(손절 기준 수익률) 이하로 떨어지면 손절하는 알고리즘
         elif self.sell_list_num == 2:
-            sql = "SELECT code, rate, present_price,valuation_profit FROM all_item_db WHERE (sell_date = '%s') " \
-                  "and ((clo5 < clo20) or rate <= '%s') group by code"
-            sell_list = self.engine_simulator.execute(sql % (0, self.losscut_point)).fetchall()
+
+            code_sell = {}
+            prices = []
+
+            sql_list = """
+                                          SELECT code, purchase_price, present_price
+                                          FROM all_item_db
+                                          WHERE (sell_date = '0')
+                                          group by code
+                                      """
+
+            sell_list_temp = self.engine_simulator.execute(sql_list).fetchall()
+
+            for item in sell_list_temp:
+                code = item.code
+                purchase_price = item.purchase_price
+                present_price = item.present_price
+
+                new_sell_point = (present_price/purchase_price) * 100
+
+
+
+                code_sell[code] = new_sell_point
+
+
+
+
+
+
+            sql = f'''
+                      SELECT code, rate, present_price,valuation_profit FROM all_item_db WHERE (sell_date = {0})
+                      and ((clo5 < clo20) or rate <= {self.losscut_point} ) group by code
+                  '''
+            sell_list = self.engine_simulator.execute(sql).fetchall()
 
 
         # 5 / 40 이동 평균선 데드크로스 이거나, losscut_point(손절 기준 수익률) 이하로 떨어지면 손절하는 알고리즘

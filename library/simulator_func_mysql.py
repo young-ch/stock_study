@@ -150,7 +150,9 @@ class simulator_func_mysql:
             # 테마 코드 끝
             self.thema_code_end = 599
             # # 익절 수익률 기준치
-            self.sell_point = 150
+            self.sell_sum_point = 60
+
+            self.sell_point = 20
 
             self.vol_mul = 1.5
 
@@ -166,7 +168,7 @@ class simulator_func_mysql:
             # 특정 거래대금 보다 x배 이상 증가 할 경우 매수
             self.volume_up = 2
 
-            # 매도 리스트 설정 알고리즘 번호(절대모멘텀 code ver)
+            # 매도 리스트 설정 알고리즘 번호
             self.sell_list_num = 2
             # n일 전 종가 데이터를 가져올지 설정 (ex. 20 -> 장이 열리는 날 기준 20일 이니까 기간으로 보면 약 한 달, 250일->1년)
             self.day_before = 100  # 단위 일
@@ -216,33 +218,41 @@ class simulator_func_mysql:
 
             ######### 알고리즘 선택 #############
             # 매수 리스트 설정 알고리즘 번호
-            self.db_to_realtime_daily_buy_list_num = 11
+            self.db_to_realtime_daily_buy_list_num = 4
 
-            self.use_min = True
+            self.use_min = False
             self.only_nine_buy = False
 
-            #self.use_ai = True  # ai 알고리즘 사용 시 True 사용 안하면 False
-            #self.ai_filter_num = 1  # ai 알고리즘 선택
+            self.use_ai = True  # ai 알고리즘 사용 시 True 사용 안하면 False
+            self.ai_filter_num = 1  # ai 알고리즘 선택
 
             self.interval_month = 1
 
             # 매도 리스트 설정 알고리즘 번호
-            self.sell_list_num = 2
+            self.sell_list_num = 1
             ###################################
             # 초기 투자자금
             self.start_invest_price = 5000000
 
+            # 전날보다 상승률 이상
+            self.diff_up = 5
+            # 전날보다 상승률 이하
+            self.diff_down = 8
+            # 테마 코드 시작
+            self.thema_code_start = 130
+            # 테마 코드 끝
+            self.thema_code_end = 599
 
            # self.use_ai = True  # ai 알고리즘 사용 시 True 사용 안하면 False
            # self.ai_filter_num = 1  # ai 알고리즘 선택
 
             # 거래량
-            self.total_transaction_price = 10000000
+            self.total_transaction_price = 5000000
             # 매수 금액
             self.invest_unit = 1000000
 
             # 자산 중 최소로 남겨 둘 금액
-            self.limit_money = 100000
+            self.limit_money = 0
 
             # n일 전 종가 데이터를 가져올지 설정 (ex. 20 -> 장이 열리는 날 기준 20일 이니까 기간으로 보면 약 한 달, 250일->1년)
             self.day_before = 10  # 단위 일
@@ -255,9 +265,9 @@ class simulator_func_mysql:
             #거래량 배수
             self.vol_mul = 1.5
             # # 익절 수익률 기준치
-            self.sell_point = 10
+            self.sell_point = 200
             # 손절 수익률 기준치
-            self.losscut_point = -2
+            self.losscut_point = -5
             # 실전/모의 봇 돌릴 때 매수하는 순간 종목의 최신 종가 보다 1% 이상 오른 경우 사지 않도록 하는 설정(변경 가능)
             self.invest_limit_rate = 1.01
             # 실전/모의 봇 돌릴 때 매수하는 순간 종목의 최신 종가 보다 -2% 이하로 떨어진 경우 사지 않도록 하는 설정(변경 가능)
@@ -963,13 +973,21 @@ class simulator_func_mysql:
         # 거래량이 급증한 경우 매수 하는 알고리즘  (상승장 컨셉)
         elif self.db_to_realtime_daily_buy_list_num == 4:
 
-            sql = "select * from `" + date_rows_yesterday + "` a where yes_clo20 > yes_clo5 and clo5 > clo20 and volume * close >= '%s' " \
-                                                        "and vol20 * '%s' < volume and d1_diff_rate > '%s' " \
-                                                        "and NOT exists(select null from stock_konex b where a.code = b.code) " \
-                                                        "order by volume * close desc"
-
-
-            realtime_daily_buy_list = self.engine_daily_buy_list.execute(sql % (date_rows_yesterday, self.total_transaction_price , self.vol_mul , self.d1_diff)).fetchall()
+            sql = f'''
+                    select YES_DAILY.* from `{date_rows_yesterday}` YES_DAILY , stock_info Stock 
+                            where YES_DAILY.code = Stock.code 
+                            and yes_clo20 > yes_clo5 and clo5 > clo20 
+                            AND YES_DAILY.clo5_diff_rate >= {self.diff_up} 
+                            AND YES_DAILY.clo5_diff_rate < {self.diff_down}
+                            And Stock.thema_code between {self.thema_code_start} and {self.thema_code_end} 
+                            AND Stock.thema_code IS NOT NULL 
+                            and NOT exists(select null from stock_konex b where YES_DAILY.code = b.code) 
+                            and NOT exists(select null from stock_managing c where YES_DAILY.code = c.code and c.code_name != '' group by c.code) 
+                            and NOT exists(select null from stock_insincerity d where YES_DAILY.code = d.code and d.code_name != '' group by d.code) 
+                            and Stock.remarks NOT like '%관리종목%' 
+                            and Stock.remarks NOT like '%거래정지%'
+                  '''
+            realtime_daily_buy_list = self.engine_daily_buy_list.execute(sql).fetchall()
 
 
         # 매수함수
@@ -1633,45 +1651,19 @@ class simulator_func_mysql:
         if self.sell_list_num == 1:
             # select 할 컬럼은 항상 코드명, 수익률, 매도할 종목의 현재가, 수익(손실)금액
             # sql 첫 번째 라인은 항상 고정
-            sql = "SELECT code, rate, present_price,valuation_profit FROM all_item_db WHERE (sell_date = '%s') " \
-                  "and (rate>='%s' or rate <= '%s') group by code"
-            sell_list = self.engine_simulator.execute(sql % (0, self.sell_point, self.losscut_point)).fetchall()
+            sql = f'''
+                      SELECT code, rate, present_price,valuation_profit FROM all_item_db WHERE (sell_date = {0})
+                      and ((clo5 < clo20) or purchase_rate <= {self.losscut_point} or purchase_rate >= {self.sell_point}) group by code
+                   '''
+            sell_list = self.engine_simulator.execute(sql).fetchall()
 
 
         # 5 / 20 이동 평균선 데드크로스 이거나, losscut_point(손절 기준 수익률) 이하로 떨어지면 손절하는 알고리즘
         elif self.sell_list_num == 2:
 
-            code_sell = {}
-            prices = []
-
-            sql_list = """
-                                          SELECT code, purchase_price, present_price
-                                          FROM all_item_db
-                                          WHERE (sell_date = '0')
-                                          group by code
-                                      """
-
-            sell_list_temp = self.engine_simulator.execute(sql_list).fetchall()
-
-            for item in sell_list_temp:
-                code = item.code
-                purchase_price = item.purchase_price
-                present_price = item.present_price
-
-                new_sell_point = (present_price/purchase_price) * 100
-
-
-
-                code_sell[code] = new_sell_point
-
-
-
-
-
-
             sql = f'''
                       SELECT code, rate, present_price,valuation_profit FROM all_item_db WHERE (sell_date = {0})
-                      and ((clo5 < clo20) or rate <= {self.losscut_point} ) group by code
+                      and ((clo5 < clo20) or rate <= {self.losscut_point} or purchase_rate >= {self.sell_sum_point} or rate >= {self.sell_point} ) group by code
                   '''
             sell_list = self.engine_simulator.execute(sql).fetchall()
 

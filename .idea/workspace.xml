@@ -23,9 +23,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library/simulator_func_mysql.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/simulator_func_mysql.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/jackbot.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/jackbot.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20201026" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20201027" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/jackbot.log.20201028" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -360,38 +357,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="739" y="294" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1595752847876" />
-    <state width="1899" height="335" key="GridCell.Tab.0.bottom" timestamp="1604190484769">
+    <state width="1899" height="335" key="GridCell.Tab.0.bottom" timestamp="1604193961077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="335" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604190484769" />
-    <state width="1899" height="335" key="GridCell.Tab.0.center" timestamp="1604190484769">
+    <state width="1899" height="335" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604193961077" />
+    <state width="1899" height="335" key="GridCell.Tab.0.center" timestamp="1604193961077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="335" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604190484769" />
-    <state width="1899" height="335" key="GridCell.Tab.0.left" timestamp="1604190484769">
+    <state width="1899" height="335" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604193961077" />
+    <state width="1899" height="335" key="GridCell.Tab.0.left" timestamp="1604193961077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="335" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604190484769" />
-    <state width="1899" height="335" key="GridCell.Tab.0.right" timestamp="1604190484769">
+    <state width="1899" height="335" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604193961077" />
+    <state width="1899" height="335" key="GridCell.Tab.0.right" timestamp="1604193961077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="335" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604190484769" />
-    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.bottom" timestamp="1604190508437">
+    <state width="1899" height="335" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604193961077" />
+    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.bottom" timestamp="1604193961077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604190508437" />
-    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.center" timestamp="1604190508437">
+    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604193961077" />
+    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.center" timestamp="1604193961076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604190508437" />
-    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.left" timestamp="1604190508437">
+    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604193961076" />
+    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.left" timestamp="1604193961076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604190508437" />
-    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.right" timestamp="1604190508437">
+    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604193961076" />
+    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.right" timestamp="1604193961077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604190508437" />
+    <state x="166" y="283" width="1899" height="335" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604193961077" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1595846313878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -444,38 +441,28 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/library/simulator_func_mysql.py</url>
-          <line>876</line>
+          <line>886</line>
           <option name="timeStamp" value="68" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/library/simulator_func_mysql.py</url>
-          <line>883</line>
+          <line>893</line>
           <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/library/simulator_func_mysql.py</url>
-          <line>1154</line>
+          <line>1172</line>
           <option name="timeStamp" value="80" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/library/simulator_func_mysql.py</url>
-          <line>1155</line>
+          <line>1173</line>
           <option name="timeStamp" value="81" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/library/simulator_func_mysql.py</url>
-          <line>1675</line>
+          <line>1667</line>
           <option name="timeStamp" value="83" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/library/simulator_func_mysql.py</url>
-          <line>1655</line>
-          <option name="timeStamp" value="86" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/library/simulator_func_mysql.py</url>
-          <line>1664</line>
-          <option name="timeStamp" value="87" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
